@@ -12,7 +12,7 @@ My first thought was to simply compare the average sales before and after the pr
 That’s when I came across **CausalImpact()** created by researchers at Google. CausalImpact is a package that enables you to do lift analysis in the absence of A/B tests. It’s very easy to implement and requires just four lines of code to get your output. I was fascinated by the package and realized that to truly understand it I needed to have a look under the hood.
 ## The challenges I faced
 Causal Impact uses a Bayesian Structural Time Series model to make counterfactual predictions (don’t worry if you don’t understand this yet, I’ll explain all of this down the road). Now I had no idea what BSTS models were and to be honest I was not even sure I knew what Bayesian Statistics really is. As I read the technical paper I came across all sorts of mathematical notations and keywords such as the **Kalman filter, posterior distributions, Gibbs sampler, spike and slab priors** etc etc. Words that I couldn’t figure out for the life of me! I realized that if I wanted to understand the paper and the algorithm, I needed to start from the basics.
-# Why am I writing about this? Why should you care about reading?
+## Why am I writing about this? Why should you care about reading?
 I’m no expert in this field and am learning everything from scratch. Writing forces me to keep learning and helps me identify gaps in my understanding.
 Documenting this journey would be valuable to 
 1. see my progress over the weeks and months 
