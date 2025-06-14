@@ -41,3 +41,8 @@ Causal Impact
 1. [YouTube demo](https://www.youtube.com/watch?v=GTgZfCltMm8) 
 2. Github [repo](https://github.com/google/CausalImpact)
 3. Technical [paper](https://projecteuclid.org/journals/annals-of-applied-statistics/volume-9/issue-1/Inferring-causal-impact-using-Bayesian-structural-time-series-models/10.1214/14-AOAS788.full)
+
+Bayesian Statistics
+ 1. Bayesian Statistics the Fun Way [book](https://www.amazon.com/dp/B07J461Q2K?ref=cm_sw_r_ffobk_cp_ud_dp_JXKX7NGTARGC7W81DJWR&ref_=cm_sw_r_ffobk_cp_ud_dp_JXKX7NGTARGC7W81DJWR&social_share=cm_sw_r_ffobk_cp_ud_dp_JXKX7NGTARGC7W81DJWR&bestFormat=true&previewDoh=1) (Will Kurt)
+ 2. Bayesian Statistics for Beginners [book](https://www.amazon.com/dp/B083FYDBGZ?ref=cm_sw_r_ffobk_cp_ud_dp_DBCM0M833P7T2KASXRRT&ref_=cm_sw_r_ffobk_cp_ud_dp_DBCM0M833P7T2KASXRRT&social_share=cm_sw_r_ffobk_cp_ud_dp_DBCM0M833P7T2KASXRRT&bestFormat=true&previewDoh=1) (Donovan and Mickey)
+ 3. Doing Bayesian Data Analysis [book](https://a.co/d/7l2mfs1) (John Kruschke)
