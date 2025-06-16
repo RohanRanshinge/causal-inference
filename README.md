@@ -1,41 +1,44 @@
-# Zero to Hero in Bayesian Structural Time Series Models
-The first time I came across Bayesian Statistics and Bayesian Structural Time Series models I was completely at sea and had no idea what I was reading. After much thought, unnecessary planning and a whole lot of procrastination later, I finally decided to spend some real time learning about this field. As I went through various sources, I soon came across topics that were deeply fascinating and intellectually stimulating and cursed myself for not starting sooner! I read multiple books, watched far too many YouTube videos and completed various courses on Coursera all in the hopes of learning something of value. As I compiled my material, I thought it would be a shame if all my notes were kept private with me. That’s when I decided to publish them as online articles with the hope that someone else might find them useful! 
+# Zero to Hero in Causal Inference
+In my previous role, I was once asked to find the lift associated with a promotional event. The promotion had already run on multiple products nationwide and I was asked to find the effectiveness of it retrospectively.
 
-And so our adventure begins…
+As I researched the best way to solve this, I came across the package CausalImpact() and the world of Causal Inference, Bayesian Statistics and Bayesian Structural Time Series models. As these fields were a bit foreign to me, I did what any sane person would do - just run the package and move on. 
+ 
+## What is this Causal Impact?
+CausalImpact is a package created by researchers at Google, that enables you to do lift analysis in the absence of A/B tests. It creates counterfactual predictions and estimates the lift, along with generating useful charts and reports. It’s very easy to implement and requires executing only four lines of code. I was very fascinated by this package and realized if I was to truly understand it, I needed to have a deeper look under the hood. 
 
-Welcome to the first post of our journey into Bayesian Statistics and Bayesian Structural Time Series (BSTS) models. The objective of this series is to go from a novice to a (kinda) expert in this domain and learn all kinds of fun things along the way. 
-## Why learn Bayesian Stats and BSTS models?
-Quick story time - At my previous role, I was once asked to find the lift associated with a certain promotional event. This promotion was run on a bunch of products on different dates and offered to all customers nationwide. The promotion was already live and I was asked to find the effectiveness of this promotion retrospectively. 
+## But why bother learning the basics when I already had the answer? 
+Running the package as a blackbox and not fully understanding it bothered me. I thought I understood the package but in a more real sense I didn’t really understand the package. It still felt a little like magic. And so after much thought, unnecessary planning and a whole lot of procrastination later, I finally decided to spend some time learning the basics.
 
-My first thought was to simply compare the average sales before and after the promotion. However, I quickly realized that this method won’t work. The difference in sales there could be due to natural fluctuations, seasonality or just random noise. How do I confidently say that any difference was truly due to the promotion? 
-
-That’s when I came across **CausalImpact()** created by researchers at Google. CausalImpact is a package that enables you to do lift analysis in the absence of A/B tests. It’s very easy to implement and requires just four lines of code to get your output. I was fascinated by the package and realized that to truly understand it I needed to have a look under the hood.
 ## The challenges I faced
-Causal Impact uses a Bayesian Structural Time Series model to make counterfactual predictions (don’t worry if you don’t understand this yet, I’ll explain all of this down the road). Now I had no idea what BSTS models were and to be honest I was not even sure I knew what Bayesian Statistics really is. As I read the technical paper I came across all sorts of mathematical notations and keywords such as the **Kalman filter, posterior distributions, Gibbs sampler, spike and slab priors** etc etc. Words that I couldn’t figure out for the life of me! I realized that if I wanted to understand the paper and the algorithm, I needed to start from the basics.
+Causal Impact uses a Bayesian Structural Time Series (BSTS) model to make counterfactual predictions - don’t worry if you don’t understand this yet, I’ll explain this in detail down the road. As I read the technical paper, I came across various fancy mathematical notations and fun words such as **the Kalman filter, posterior distributions, Gibbs sampler, spike and slab priors, MCMC simulations etc.** ; words that seemed frightening and complex! Surely, I needed a PhD to understand this - or at least that’s what I thought. To my surprise, learning about this was actually fun! I read multiple books, watched far too many YouTube videos and signed up for various courses online all the while cursing myself for not starting sooner!
+
 ## Why am I writing about this? Why should you care about reading?
-I’m no expert in this field and am learning everything from scratch. Writing forces me to keep learning and helps me identify gaps in my understanding.
-Documenting this journey would be valuable to 
-1. see my progress over the weeks and months 
-2. be useful to someone else on the internet (hopefully) who also is interested in causal impact but does not know where to start. 
+I’m no expert in this field and am learning new concepts as I type this. 
+Writing forces me to
+1. identify gaps in my own understanding (see Feynman technique)
+2. see my own progress over the weeks and months and
+3. be of use to someone else on the internet (hopefully) who is also interested in Causal Impact but does not know where to start. 
+If I can save even one person’s time then it would be fantastic. If not, I get a fun reference to read later on which is still great. Win-win!
 
-The problem with experts is, they are so knowledgeable, they do not know the issues faced by beginners. If I can save even one person’s time then it would be fantastic, if not, I get a fun reference to read later on which is still great. Win-win!
+## Why listen to me and not an expert?
+The thing about experts is, they do not know the problems faced by beginners. My journey stumbling through these various topics might be useful to the next beginner starting here.
 
+**“The master cannot see with the student’s eyes”**
 
-***“The master cannot see with the student’s eyes”***
+I plan on keeping this a running document. As I progress through this journey I expect to come across various concepts that are familiar and many that are not so. The plan is to cover topics that are directly applicable as well as foundational concepts that - though might not be directly relevant - are still important to improve our understanding of the core subject. I’ll be documenting this as I come across them and will curate my learning plan accordingly. I’ll also be linking all the sources that I find helpful.
 
-As I progress through this journey I expect to come across various concepts that are familiar and many that are not so. The plan is to cover topics that are directly applicable as well as foundational concepts that - though might not be directly relevant - are still important to improve our understanding of the core subject. I’ll be documenting this as I come across them and will curate my learning plan accordingly. I’ll also be linking all the sources that I find helpful.
+And so I invite you on this adventure, to go from a beginner to an expert (sort of), and learn all kinds of fun things along the way!
+
 ## Next Steps
-To fully understand CausalImpact() there are four big topics we need to cover:
+To fully understand CausalImpact() there are three big topics we need to cover:
 1. Bayesian Statistics
-2. Time Series Analysis
-3.  State Space Models
-4.  Causal Inference
+2. Time Series Analysis + State Space Models
+3. Causal Inference
 
-This might sound like overkill but who cares! I’m here to learn and no learning is ever wasted.
+In the next post, I’ll dive into the basics of Bayesian Statistics which is foundational and will explain some of the core concepts mentioned earlier!
 
-In the next post, I’ll dive into the basics of Bayesian Statistics which is the foundation on which everything is built and explain some of the core concepts mentioned earlier!
+Alright then, enough with the pitch, let's jump straight into Bayesian Statistics next!
 
-Alright enough with the pitch, let's jump straight into Bayesian Statistics next!
 ## Recommended Readings
 Causal Impact
 1. [YouTube demo](https://www.youtube.com/watch?v=GTgZfCltMm8) 
