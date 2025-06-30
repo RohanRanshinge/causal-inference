@@ -14,7 +14,7 @@ Notation: P(X=3) = ⅙
 
 
 An important characteristic of probability is that the probabilities of all events should always add to one. 
-* That is, if the probability of X being 3 is 1/6 , then the probability of X not being 3 is ⅚ 
+* ie, if the probability of X being 3 is 1/6 , then the probability of X not being 3 is ⅚ 
     * if P(X=3) = ⅙, then P(X!=3) = ⅚
 * Sum(both events) = 1
 
@@ -72,14 +72,12 @@ $E(X) = \frac{1}{6}*(1+2+3+4+5+6) = 3.5$ \
 Since each side is equally likely we sum up all the values and divide them by 6.
 
 ## Frameworks for Defining Probabilities
-There are three main frameworks we need to be aware of for defining probabilities
-1. Classical framework\
-  a. Outcomes that are equally likely have equal probabilities. (rolling a fair die)
-2. Frequentist framework\
-  a. You have a hypothetical infinite sequence and then look at the frequency of outcomes in that hypothetical infinite sequence (if a die is rolled infinitely, probability of rolling a 2 is 1 in 6)
-3. Bayesian framework\
+There are two main frameworks we need to be aware of for defining probabilities
+1. Frequentist framework\
+  a. It's all about probability in the long run.  You have a hypothetical infinite sequence and then look at the frequency of outcomes in that hypothetical infinite sequence (if a die is rolled infinitely, probability of rolling a 2 is 1 in 6)
+2. Bayesian framework\
   a. Based on personal perspective. Takes into account what you know about a particular problem\
 
-We will be using the Bayesian framework here.
+We will be using the Bayesian framework in our journey.
 ## Recommended Readings
 Bayesian Statistics: From Concept to Data Analysis ([Coursera](https://www.coursera.org/learn/bayesian-statistics/home/module/1))
