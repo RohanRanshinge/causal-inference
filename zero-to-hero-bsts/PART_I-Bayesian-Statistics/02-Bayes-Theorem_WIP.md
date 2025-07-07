@@ -1,18 +1,23 @@
 # Chapter 2: Bayes’ theorem
 
-Alright! Now that we have some understanding of probability, let’s get into one of the most important theorems!
+Alright! Earlier we covered Bayesian statistics and a bit of probability - now let’s get into the most important theorem of all! 
 
-The almighty Bayes’ theorem!
+**The almighty Bayes’ theorem!**
 
-Bayes theorem is based on conditional probability. It allows us to find the probability of event A happening, given we know event B happened.
+Bayes’ theorem is literally the backbone of this field (no points for guessing where the name Bayesian Statistics comes).
 
-Let’s see an example to understand the core concept!
-## Example 1: Sorting the Staff
-Q) There are 20 employees at a company, 12 of whom are female.
+Bayes theorem is based on conditional probability.\
+i.e. finding the probability of event A happening, given we know event B already happened.
+
+Let’s first see an example to understand conditional probability!
+## Challenge 1: Sorting the Staff
+*Q) There are 20 employees at a company, 12 of whom are female.
 There are 10 PhDs, of which 6 are female.
-What is the probability of being a female given they have a PhD?
+What is the probability of being a female given they have a PhD?*
 
-We can solve this directly using Bayes’ theorem (revealed later), but first let’s understand how to solve this in a simple table format.
+You can solve this mentally too but let’s try to solve this using a simple table.
+Based on the data given to us we can create the below table:
+Our job is to find the missing data values. As you can see this is fairly easy to solve -
 
 Based on the data given to us we can create the following table:
 | | Female | Male | Total
@@ -31,10 +36,10 @@ Our job is to find the missing data values. As you can see this is fairly easy t
 **Total**|12|8|20 |
 
 
-Given just this table, we can solve the question! \
-We are asked what is P(F|PhD)? \
-The total number of PhDs = 10. Of which the number of females = 6.\
-Thus, the universe size is 10 and we want to find the probability of being female. That equates to 6/10
+We are asked what is **P(F|PhD)**?    
+The total number of PhDs = 10. Of which the number of females = 6.  
+Thus, the universe size is 10 and we want to find the probability of being female.   
+That equates to, **P(F|PhD) = 6/10**
 
 We can arrive at the same conclusion in a different way using conditional probabilities which is given as,
 
@@ -76,4 +81,33 @@ In mathematical form, the conditional probability is given as:
 
 $P(A|B) = \frac{P(A \cap B)}{P(B)}$ ... eqn(1)
 
-i.e. The probability of A given B is the probability that A and B happen together relative to the probability that B happens at all.
+i.e. The probability of A given B is the probability that A and B happen together relative to the probability that B happens at all.  
+
+Lets look at equation 1 again -  
+$P(A|B) = \frac{P(A \cap B)}{P(B)}$  
+Therefore, $P(A|B) * P(B) = P(A \cap B)$
+
+Similarly, we can do the same manipulation for P(B|A) to get  
+$P(B|A) * P(A) = P(A \cap B)$
+
+Since both the RHS values on the above equations are the same we know these equations are equal.  
+
+Therefore,  
+$P(A|B) * P(B) = P(B|A) * P(A) $
+
+
+$P(A|B) = \frac{P(B|A) * P(A)}{P(B)}$
+
+**This is the Bayes theorem!**
+
+Why is this so great? Because if we are given the conditional probability of one event, we can use the theorem to find the conditional probability in the opposite direction.  
+I.e. if we know P(B|A) we can find P(A|B)
+
+The numerator of the Bayes’ rule is the joint probability P(A  B), and the denominator is the marginal probability P(B)
+
+## The Hidden Constant: Finding the denominator in Bayes' theorem
+How do we calculate the denominator in Bayes theorem?
+For P(B) think from a venn diagram POV
+
+
+
