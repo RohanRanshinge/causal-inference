@@ -109,7 +109,43 @@ The numerator of the Bayes’ rule is the joint probability P(A  B), and the den
 How do we calculate the denominator in Bayes theorem?
 For P(B) think from a venn diagram POV
 
-![Alt text](zero-to-hero-bsts/PART_I-Bayesian-Statistics/images/P(B)-venn-diagram.jpg)
-![alt text](https://github.com/rohanranshinge/causal-inference/zero-to-hero-bsts/PART_I-Bayesian-Statistics/images/P(B)-venn-diagram.jpg?raw=true)
+![Alt text](images/P(B)-venn-diagram.jpg?raw)
+
+The denominator P(B) in the theorem can be expressed as  
+$$P(B) = P(B \cap A) + P(B \cap \bar{A})$$   
+Since the joint probability of B and A is given by  
+$$P(B \cap A) = P(B|A) * P(A)$$  
+Similarly,  
+$$P(B \cap \bar{A}) = P(B|\bar{A}) * P(\bar{A})$$  
+
+Therefore P(B) can be rewritten as,
+$$P(B) = P(B|A) * P(A) + P(B|\bar{A}) * P(\bar{A})$$
+
+Okay so what? Let’s see an example to understand why this is useful!
+
+## Challenge 2: Positive Result, Uncertain Reality: Decoding Cancer Probability
+
+Yudkowsky in his Bayes article has given a great example - let’s have a look  
+*Q) 1% of women at age forty who participate in routine screening have breast cancer. 80% of women with breast cancer will get positive mammographies. 9.6% of women without breast cancer will also get positive mammographies. A woman in this age group had a positive mammography in a routine screening. 
+What is the probability that she actually has breast cancer?*
+
+Let’s write this down -  
+P(BC) = 1% = 0.01		therefore, P(~BC) = 99% = 0.99  
+P(+ | BC) = 80%  
+P(+ | ~BC) = 9.6%  
+P(BC | +) = ?  
+We will solve this using the equations we saw previously and also see it in table format  
+
+**With Equations**  
+Using Bayes theorem,  
+$P(BC|+) = \frac{P(+|BC) * P(BC)}{P(+)}$
+
+We already have the values of the numerator. The objective then becomes to find the denominator and we are done!  
+
+What is the probability of testing positive?  
+$P(+) = P(+ \cap BC) + P(+ \cap \bar{BC})$	                      …remember the venn diagram earlier?
+
+$P(+ \cap BC) = P(+|BC) * P(BC) 		= 0.8 * 0.01 = 0.008 $  
+$P(+ \cap ~BC) = P(+|~BC) * P(~BC) 	= 0.096 * 0.99 = 0.0905 $
 
 
