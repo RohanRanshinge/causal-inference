@@ -146,6 +146,60 @@ What is the probability of testing positive?
 $P(+) = P(+ \cap BC) + P(+ \cap \bar{BC})$	                      …remember the venn diagram earlier?
 
 $P(+ \cap BC) = P(+|BC) * P(BC) 		= 0.8 * 0.01 = 0.008 $  
-$P(+ \cap ~BC) = P(+|~BC) * P(~BC) 	= 0.096 * 0.99 = 0.0905 $
+$P(+ \cap \bar{BC}) = P(+| \bar{BC}) * P( \bar{BC}) 	= 0.096 * 0.99 = 0.0905 $
 
+Therefore,  
+$P(+) = 0.008+0.0905 = 0.10304$
+
+Plugging this value back in to the bayes theorem we get -  
+$P(BC|+) = \frac{0.8 * 0.01}{0.10304} = 7.7\\% $
+
+Turns out, even if you test positive, there’s only a **7.7%** chance you actually have cancer! Crazy, right?!  
+Isn’t that so counterintuitive!? We just saw that when you truly have breast cancer, the test gives a positive result 80% of the time but when we reverse the probability, we see that if we test positive on a test, the probability of you actually having cancer is just 7.7% !!  
+Not convinced? Let's look at this using tables
+
+**Using Tables**  
+From the question we know 
+$P(BC) = 1% = 0.01$;	$P(\bar{BC}) = 99% = 0.99$  
+$P(+ | BC) = 0.8$  
+Using these two values we can find $P(+ \cap BC)$   
+$P(+ \cap BC) = P(+|BC) * P(BC) = 0.8*0.01 = 0.008$
+
+From the question we also know P(+|~BC) = 9.6% = 0.096  
+$P(+ \cap \bar{BC}) = P(+| \bar{BC}) * P(\bar{BC}) = 0.096*0.99 = 0.095$
+
+Let’s put these values in a table
+| | Cancer | No Cancer | Total
+|-| -------|------|------|
+**Positive**|0.008|0.095|0.103 |
+**Negative**|0.002|0.895|0.897 |
+**Total**|0.01|0.99|1 |
+
+Using Bayes theorem,  
+$P(BC|+) = \frac{P(+|BC) * P(BC)}{P(+)}$  
+
+$P(BC|+) = \frac{(0.008 /0.01) * 0.01}{0.10304} = 7.7\\% $  
+
+We were given the probability of a positive result given a cancer condition and using Bayes theorem we were able to find the probability of cancer given we had a positive result.
+
+## Mission Complete: Summary
+In this chapter we saw the almighty Bayes theorem and derived it too.   
+Remember, whenever you are given the probability of one direction and are asked the probability of the other direction you can use the Bayes theorem.  
+
+Alright! Let’s recap the main equations we need to be aware of
+
+$$P(A|B) = \frac{P(A ∩ B)}{P(B)}$$ 
+$$P(A|B) = \frac{P(B|A) * P(A)}{P(B)}$$
+$$P(A|B) = \frac{P(B|A) * P(A)}{P(B \cap A) + P(B \cap \bar{A})}$$
+$$P(A|B) = \frac{P(B|A) * P(A)}{P(B | A) * P(A) + P(B | \bar{A}) * P(\bar{A})}$$
+
+These are multiple ways of writing the same equation!
+
+## Skill Tree Extensions: Recommended Readings
+1. Yudkowsky's Bayes [article](https://www.yudkowsky.net/rational/bayes) [HIGHLY RECOMMEND!!!]
+2. Bayesian Statistics the Fun Way [book](https://a.co/d/dLdYfSo) (Will Kurt)
+3. Will Kurt's blog (countbayesie.com) - [Bayes](https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego)
+4. Bayesian Statistics for Beginners [book](https://a.co/d/0mdF1pj) (Donovan and Mickey)
+5. Doing Bayesian Data Analysis [book](https://a.co/d/7l2mfs1) (John Kruschke)
+6. Bayesian Statistics: From Concept to Data Analysis ([Coursera](https://www.coursera.org/learn/bayesian-statistics/home/module/1))
 
