@@ -1,5 +1,5 @@
 # Chapter 2: Bayesian Inference: Priors, Likelihoods and Posteriors
-Today’s chapter is a fun one and on which everything in the future will rely on. We’re covering Bayesian inference!
+Today’s chapter is a fun one and lays the groundwork for all future chapters. We’re covering Bayesian inference!
 
 At its core, Bayesian inference revolves around understanding and quantifying uncertainty. 
 
