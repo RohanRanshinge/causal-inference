@@ -1,4 +1,4 @@
-# Chapter 2: Bayes’ theorem
+# Bayes’ theorem
 
 Alright! Earlier we covered Bayesian statistics and a bit of probability - now let’s get into the most important theorem of all! 
 
