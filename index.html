@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Zero to Hero in Causal Inference</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Welcome</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Zero to Hero in Causal Inference</span></span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -203,9 +203,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome"><span class="header-section-number">1</span> Welcome</a>
+  <li><a href="#zero-to-hero-in-causal-inference" id="toc-zero-to-hero-in-causal-inference" class="nav-link active" data-scroll-target="#zero-to-hero-in-causal-inference"><span class="header-section-number">1</span> Zero to Hero in Causal Inference</a>
   <ul class="collapse">
   <li><a href="#what-is-this-causal-impact" id="toc-what-is-this-causal-impact" class="nav-link" data-scroll-target="#what-is-this-causal-impact"><span class="header-section-number">1.1</span> What is this Causal Impact?</a></li>
+  <li><a href="#but-why-bother-learning-the-basics-when-i-already-had-the-answer" id="toc-but-why-bother-learning-the-basics-when-i-already-had-the-answer" class="nav-link" data-scroll-target="#but-why-bother-learning-the-basics-when-i-already-had-the-answer"><span class="header-section-number">1.2</span> But why bother learning the basics when I already had the answer?</a></li>
+  <li><a href="#the-challenges-i-faced" id="toc-the-challenges-i-faced" class="nav-link" data-scroll-target="#the-challenges-i-faced"><span class="header-section-number">1.3</span> The challenges I faced</a></li>
+  <li><a href="#why-am-i-writing-about-this-why-should-you-care-about-reading" id="toc-why-am-i-writing-about-this-why-should-you-care-about-reading" class="nav-link" data-scroll-target="#why-am-i-writing-about-this-why-should-you-care-about-reading"><span class="header-section-number">1.4</span> Why am I writing about this? Why should you care about reading?</a></li>
+  <li><a href="#why-listen-to-me-and-not-an-expert" id="toc-why-listen-to-me-and-not-an-expert" class="nav-link" data-scroll-target="#why-listen-to-me-and-not-an-expert"><span class="header-section-number">1.5</span> Why listen to me and not an expert?</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps"><span class="header-section-number">1.6</span> Next Steps</a></li>
+  <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings"><span class="header-section-number">1.7</span> Recommended Readings</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -238,14 +244,45 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="welcome" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Welcome</h1>
+<section id="zero-to-hero-in-causal-inference" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Zero to Hero in Causal Inference</h1>
 <p>In my previous role, I was once asked to find the lift associated with a promotional event. The promotion had already run on multiple products nationwide and I was asked to find the effectiveness of it retrospectively.</p>
-<p>As I researched the best way to solve this, I came across the package <code>CausalImpact()</code> and the world of Causal Inference, Bayesian Statistics and Bayesian Structural Time Series models. As these fields were a bit foreign to me, I did what any sane person would do - just run the package and move on.</p>
+<p>As I researched the best way to solve this, I came across the package CausalImpact() and the world of Causal Inference, Bayesian Statistics and Bayesian Structural Time Series models. As these fields were a bit foreign to me, I did what any sane person would do - just run the package and move on.</p>
 <section id="what-is-this-causal-impact" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="what-is-this-causal-impact"><span class="header-section-number">1.1</span> What is this Causal Impact?</h2>
 <p>CausalImpact is a package created by researchers at Google, that enables you to do lift analysis in the absence of A/B tests. It creates counterfactual predictions and estimates the lift, along with generating useful charts and reports. It’s very easy to implement and requires executing only four lines of code. I was very fascinated by this package and realized if I was to truly understand it, I needed to have a deeper look under the hood.</p>
-<p>This book is a living document of my journey to understand the math and mechanics behind these models.</p>
+</section>
+<section id="but-why-bother-learning-the-basics-when-i-already-had-the-answer" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="but-why-bother-learning-the-basics-when-i-already-had-the-answer"><span class="header-section-number">1.2</span> But why bother learning the basics when I already had the answer?</h2>
+<p>Running the package as a blackbox and not fully understanding it bothered me. I thought I understood the package but in a more real sense I didn’t really understand the package. It still felt a little like magic. And so after much thought, unnecessary planning and a whole lot of procrastination later, I finally decided to spend some time learning the basics.</p>
+</section>
+<section id="the-challenges-i-faced" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="the-challenges-i-faced"><span class="header-section-number">1.3</span> The challenges I faced</h2>
+<p>Causal Impact uses a Bayesian Structural Time Series (BSTS) model to make counterfactual predictions - don’t worry if you don’t understand this yet, I’ll explain this in detail down the road. As I read the technical paper, I came across various fancy mathematical notations and fun words such as <strong>the Kalman filter, posterior distributions, Gibbs sampler, spike and slab priors, MCMC simulations etc.</strong> ; words that seemed frightening and complex! Surely, I needed a PhD to understand this - or at least that’s what I thought. To my surprise, learning about this was actually fun! I read multiple books, watched far too many YouTube videos and signed up for various courses online all the while cursing myself for not starting sooner!</p>
+</section>
+<section id="why-am-i-writing-about-this-why-should-you-care-about-reading" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="why-am-i-writing-about-this-why-should-you-care-about-reading"><span class="header-section-number">1.4</span> Why am I writing about this? Why should you care about reading?</h2>
+<p>I’m no expert in this field and am learning new concepts as I type this. Writing forces me to 1. identify gaps in my own understanding (see Feynman technique) 2. see my own progress over the weeks and months and 3. be of use to someone else on the internet (hopefully) who is also interested in Causal Impact but does not know where to start. If I can save even one person’s time then it would be fantastic. If not, I get a fun reference to read later on which is still great. Win-win!</p>
+</section>
+<section id="why-listen-to-me-and-not-an-expert" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="why-listen-to-me-and-not-an-expert"><span class="header-section-number">1.5</span> Why listen to me and not an expert?</h2>
+<p>The thing about experts is, they do not know the problems faced by beginners. My journey stumbling through these various topics might be useful to the next beginner starting here.</p>
+<p><strong>“The master cannot see with the student’s eyes”</strong></p>
+<p>I plan on keeping this a running document. As I progress through this journey I expect to come across various concepts that are familiar and many that are not so. The plan is to cover topics that are directly applicable as well as foundational concepts that - though might not be directly relevant - are still important to improve our understanding of the core subject. I’ll be documenting this as I come across them and will curate my learning plan accordingly. I’ll also be linking all the sources that I find helpful.</p>
+<p>And so I invite you on this adventure, to go from a beginner to an expert (sort of), and learn all kinds of fun things along the way!</p>
+</section>
+<section id="next-steps" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="next-steps"><span class="header-section-number">1.6</span> Next Steps</h2>
+<p>To fully understand CausalImpact() there are three big topics we need to cover: 1. Bayesian Statistics 2. Time Series Analysis + State Space Models 3. Causal Inference</p>
+<p>In the next post, I’ll dive into the basics of Bayesian Statistics which is foundational and will explain some of the core concepts mentioned earlier!</p>
+<p>Alright then, enough with the pitch, let’s jump straight into Bayesian Statistics next!</p>
+</section>
+<section id="recommended-readings" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="recommended-readings"><span class="header-section-number">1.7</span> Recommended Readings</h2>
+<p>Causal Impact 1. <a href="https://www.youtube.com/watch?v=GTgZfCltMm8">YouTube demo</a> 2. Github <a href="https://github.com/google/CausalImpact">repo</a> 3. Technical <a href="https://projecteuclid.org/journals/annals-of-applied-statistics/volume-9/issue-1/Inferring-causal-impact-using-Bayesian-structural-time-series-models/10.1214/14-AOAS788.full">paper</a></p>
+<p>Bayesian Statistics<br>
+A lot of my learnings in Bayesian Stats comes from three books which are absolutely legendary. If you don’t know where to start, just grab a copy of the first two books below and you will automatically find yourself buying the third one! 1. Bayesian Statistics the Fun Way <a href="https://www.amazon.com/dp/B07J461Q2K?ref=cm_sw_r_ffobk_cp_ud_dp_JXKX7NGTARGC7W81DJWR&amp;ref_=cm_sw_r_ffobk_cp_ud_dp_JXKX7NGTARGC7W81DJWR&amp;social_share=cm_sw_r_ffobk_cp_ud_dp_JXKX7NGTARGC7W81DJWR&amp;bestFormat=true&amp;previewDoh=1">book</a> (Will Kurt) 2. Bayesian Statistics for Beginners <a href="https://www.amazon.com/dp/B083FYDBGZ?ref=cm_sw_r_ffobk_cp_ud_dp_DBCM0M833P7T2KASXRRT&amp;ref_=cm_sw_r_ffobk_cp_ud_dp_DBCM0M833P7T2KASXRRT&amp;social_share=cm_sw_r_ffobk_cp_ud_dp_DBCM0M833P7T2KASXRRT&amp;bestFormat=true&amp;previewDoh=1">book</a> (Donovan and Mickey) 3. Doing Bayesian Data Analysis <a href="https://a.co/d/7l2mfs1">book</a> (John Kruschke)</p>
+<p>PS: This book is a living document of my journey to understand the math and mechanics behind these models.</p>
 
 
 </section>
