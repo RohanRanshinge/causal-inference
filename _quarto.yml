@@ -1,6 +1,5 @@
 project:
   type: book
-  output-dir: public
 
 book:
   title: "Zero to Hero in Causal Inference"
