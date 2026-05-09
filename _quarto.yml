@@ -11,4 +11,14 @@ book:
       chapters:
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.ipynb
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.md
-        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/04-Probability-Distributions-Binomial.ipynb
+        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/02-Bayes-Theorem.md
+        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/03-Bayesian-Inference.md
+        - section: zero-to-hero-bsts/PART_I-Bayesian-Statistics/04-Probability-Distributions-Binomial.ipynb
+          chapters:
+            - zero-to-hero-bsts/PART_I-Bayesian-Statistics/04.1-Probability-Distributions-Beta.ipynb
+            - zero-to-hero-bsts/PART_I-Bayesian-Statistics/04.2-Probability-Distributions-Normal.ipynb
+        - section: zero-to-hero-bsts/PART_I-Bayesian-Statistics/05-Conjugate-Priors.md
+          chapters:
+            - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.1-Beta-Binomial-Conjugate.ipynb
+            - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.2-Gamma-Poisson-Conjugate.ipynb
+            - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Conjugate-Priors-Conclusion.md
