@@ -1,4 +1,4 @@
-# Chapter 1: Probability
+# Probability
 We can’t do Bayesian Statistics without learning about probability first! Personally, I never found probability fun. I always struggled with those questions of finding the probability of landing 5 heads consecutively or the probability of picking one ace and two queens from three decks of cards etc. I know some of you may be thinking “oh, that’s so obvious, what’s so hard about probability”. If you are already familiar with probability and are comfortable with it feel free to skip this section, but for those of us that find it challenging, this might be worth a read. (I haven’t gone into great detail here though as the intention is to just introduce the concept).
 ## Super Basics
 Starting from scratch, let’s first define probability: \
