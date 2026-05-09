@@ -20,6 +20,7 @@ Based on the data given to us we can create the below table:
 Our job is to find the missing data values. As you can see this is fairly easy to solve -
 
 Based on the data given to us we can create the following table:
+
 | | Female | Male | Total
 |:--:| :-------:|:------:|:------:|
 **PhDs**|6|?|10 |
@@ -28,13 +29,11 @@ Based on the data given to us we can create the following table:
 
 Our job is to find the missing data values. As you can see this is fairly easy to solve
 
-
 | | Female | Male | Total
 |-| -------|------|------|
 **PhDs**|6|4|10 |
 **Not PhDs**|6|4|10 |
 **Total**|12|8|20 |
-
 
 We are asked what is **P(F|PhD)**?    
 The total number of PhDs = 10. Of which the number of females = 6.  
@@ -196,6 +195,7 @@ $$P(A|B) = \frac{P(B|A) * P(A)}{P(B | A) * P(A) + P(B | \bar{A}) * P(\bar{A})}$$
 These are multiple ways of writing the same equation!
 
 ## Skill Tree Extensions: Recommended Readings
+
 1. Yudkowsky's Bayes [article](https://www.yudkowsky.net/rational/bayes) [HIGHLY RECOMMEND!!!]
 2. Bayesian Statistics the Fun Way [book](https://a.co/d/dLdYfSo) (Will Kurt)
 3. Will Kurt's blog (countbayesie.com) - [Bayes](https://www.countbayesie.com/blog/2015/2/18/bayes-theorem-with-lego)
