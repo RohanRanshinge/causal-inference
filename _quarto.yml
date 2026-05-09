@@ -1,0 +1,14 @@
+project:
+  type: book
+  output-dir: public
+
+book:
+  title: "Zero to Hero in Causal Inference"
+  author: "Rohan Ranshinge"
+  chapters:
+    - index.qmd
+    - part: "Bayesian Statistics"
+      chapters:
+        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.ipynb
+        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.md
+        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/04-Probability-Distributions-Binomial.ipynb
