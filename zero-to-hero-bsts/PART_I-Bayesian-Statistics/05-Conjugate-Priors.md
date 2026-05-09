@@ -1,4 +1,4 @@
-# Chapter 5: Conjugate Priors
+# Conjugate Priors
 Earlier we covered a few distributions. In this section we will see how we can actually apply them to solve problems!  
 Remember the Bayes theorem we had seen earlier?  
 
