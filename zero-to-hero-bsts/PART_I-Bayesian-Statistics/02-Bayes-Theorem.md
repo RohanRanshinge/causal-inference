@@ -109,7 +109,7 @@ The numerator of the Bayes’ rule is the joint probability P(A ∩ B), and the 
 How do we calculate the denominator in Bayes theorem?
 For P(B) think from a venn diagram POV
 
-![Alt text](/zero-to-hero-bsts/PART_I-Bayesian-Statistics/images/P(B)-venn-diagram.jpg?raw)
+![Venn Diagram](/zero-to-hero-bsts/PART_I-Bayesian-Statistics/images/P(B)-venn-diagram.jpg?raw)
 
 
 The denominator P(B) in the theorem can be expressed as  
