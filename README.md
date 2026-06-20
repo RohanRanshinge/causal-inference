@@ -32,7 +32,7 @@ And so I invite you on this adventure, to go from a beginner to an expert (sort 
 ## Next Steps
 To fully understand CausalImpact() there are three big topics we need to cover:
 
-1. Bayesian Statistics
+1. Bayesian Statistics    
 2. Time Series Analysis + State Space Models
 3. Causal Inference
 
