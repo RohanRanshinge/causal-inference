@@ -277,7 +277,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="the-case-of-the-flat-tire" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="the-case-of-the-flat-tire"><span class="header-section-number">2.2</span> The Case of the Flat Tire</h2>
-<p>Imagine you are late for work and see your car has a flat tire. You think there could be 3 ways this would have happened. * You drove over a nail * Your annoying neighbors took a knife to your car * A ghost didn’t want you to get to work today</p>
+<p>Imagine you are late for work and see your car has a flat tire. You think there could be 3 ways this would have happened.</p>
+<ul>
+<li>You drove over a nail</li>
+<li>Your annoying neighbors took a knife to your car</li>
+<li>A ghost didn’t want you to get to work today</li>
+</ul>
 <p>Initially, you might assume all three options are equally likely and assign equal probabilities to them (33%)</p>
 <div id="cell-2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:391}}" data-outputid="8d635fdd-fc64-429b-96f5-8c46bd2b3e96">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -330,7 +335,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>You then recall that your neighbors have actually gone to Europe for vacation and have been out for over a week. Given this, the likelihood of them returning just to do this is also (hopefully) 0. Consequently, you reject that option too and can safely conclude that you have probably driven over a nail that has caused this puncture.</p>
+<p>You then recall that your neighbors have actually gone out of town on vacation and have been out for over a week. Given this, the likelihood of them returning just to do this is also (hopefully) 0. Consequently, you reject that option too and can safely conclude that you had probably driven over a nail that caused this puncture.</p>
 <div id="cell-6" class="cell" data-cellview="form" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;height&quot;:391,&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="5dab7769-1b12-4dd6-b5fc-18a19997dd7a">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>events <span class="op">=</span> [<span class="st">'Driving over a nail'</span>, <span class="st">'Angry neighbor'</span>, <span class="st">'Ghost'</span>]</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>probabilities <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>]</span>
@@ -357,7 +362,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Through this process of elimination, you adjusted your probabilities. Each time you eliminated an option and reallocated probabilities, you created a posterior distribution. This posterior then became the prior for the next round of assessments.</p>
 <p>As you can see this is a very intuitive way of thinking and something we do all the time when making decisions. We evaluate the likelihood of multiple events and choose one that’s most likely (often by eliminating the least likely ones).</p>
-<p>In the previous example we were able to completely rule out the other options, however, in the real world when there are multiple possible causes we might not be able to fully eliminate an option. The beauty of Bayesian Statistics is that we can collect data and incrementally adjust the credibility of possible trends. The math reveals how much to re-allocate credibility in realistic probabilistic situations 1</p>
+<p>In the previous example we were able to completely rule out the other options, however, in the real world when there are multiple possible causes we might not be able to fully eliminate an option. The beauty of Bayesian Statistics is that we can collect data and incrementally adjust the credibility of possible trends. The math reveals how much to re-allocate credibility in realistic probabilistic situations.</p>
 <p>This concept is not just theoretical but actively applied in a lot of spheres in our lives. Ever wondered how Gmail or Outlook detect spam emails? These systems use a prior understanding of what defines a spam email and then evaluate the likelihood of an email having such content, resulting in a posterior distribution that decides if it’s spam or not.</p>
 </section>
 <section id="core-mechanics" class="level2" data-number="2.3">
