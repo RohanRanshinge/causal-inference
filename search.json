@@ -139,7 +139,40 @@
     "href": "zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.html",
     "title": "3  Probability",
     "section": "",
-    "text": "3.1 Expected value\nWe can’t do Bayesian Statistics without learning about probability first! Personally, I never found probability fun. I always struggled with those questions of finding the probability of landing 5 heads consecutively or the probability of picking one ace and two queens from three decks of cards etc. I know some of you may be thinking “oh, that’s so obvious, what’s so hard about probability”. If you are already familiar with probability and are comfortable with it feel free to skip this section, but for those of us that find it challenging, this might be worth a read. (I haven’t gone into great detail here though as the intention is to just introduce the concept). ## Super Basics Starting from scratch, let’s first define probability:\nProbability is the chance of observing a certain event.\nFor example, when we toss a coin, how likely is it to come up a head or a tail? &gt; ½\nOr what is the probability of rolling a 3 on a fair six-sided die? &gt; ⅙\nNotation: P(X=3) = ⅙\nAn important characteristic of probability is that the probabilities of all events should always add to one. * ie, if the probability of X being 3 is 1/6 , then the probability of X not being 3 is ⅚ * if P(X=3) = ⅙, then P(X!=3) = ⅚ * Sum(both events) = 1\nProbabilities are a way of assigning numbers to a set of mutually exclusive possibilities.\nLet’s look at two key terms that will come in handy in the future: ## Odds Probabilities can also be expressed in terms of odds.\nSo what does this mean exactly?\nIn our previous example of rolling a 3 on a fair six sided die, P(A) = ⅙\nThe odds for event A is then given as\n\\(O(A) = \\frac{P(A)}{P(A^c)} = \\frac{P(A)}{1-P(A)}\\)\n$O(A) = = $\nThis can also be written as 1:5 (or 5:1 odds against).\nSo if an event has a ⅙ probability of happening its odds are 1:5\nLet’s look at another example?\nImagine the probability of seeing a shooting star is 3/100\nTherefore, its odds are \\(O(A) = \\frac{3/100}{97/100}= \\frac{3}{97}=3:97\\)\nOr the odds against seeing a shooting star are 97:3\nSimilarly, an event with higher probability of ⅔ has 2:1 odds.\nUsing this information, we can also back calculate probabilities from odds.\nie. X:Y odds can be rewritten as \\(\\frac{X}{X+Y}\\)\nIn simpler terms, an event with 3:7 odds has a probability of \\(\\frac{3}{10}\\)\nLooking at our previous example of Leicester city winning the Premier League.\nThey had a 5000-1 odds against winning, which means odds of winning were 1:5000\n\\(P(winning) = \\frac{X}{X+Y} = \\frac{1}{5000+1}\\)\n\\(P(winning) = \\frac{1}{5001}\\)\nIn simple terms, the expected value is the average of the variable.\nIn slightly more technical terms, the expected value of a random variable X is the weighted average of values X, where the weights are the probabilities of those values.\nIt’s adding up each possible value, but each value is multiplied by its chance of happening first.\nTaking the example of a fair sided die the expected value is\n\\(E(X) = \\frac{1}{6}*(1+2+3+4+5+6) = 3.5\\)\nSince each side is equally likely we sum up all the values and divide them by 6.",
+    "text": "3.1 Super Basics\nWe can’t do Bayesian Statistics without learning about probability first! Personally, I never found probability fun. I always struggled with those questions of finding the probability of landing 5 heads consecutively or the probability of picking one ace and two queens from three decks of cards etc. I know some of you may be thinking “oh, that’s so obvious, what’s so hard about probability”. If you are already familiar with probability and are comfortable with it feel free to skip this section, but for those of us that find it challenging, this might be worth a read. (I haven’t gone into great detail here though as the intention is to just introduce the concept).\nStarting from scratch, let’s first define probability:\nProbability is the chance of observing a certain event.\nFor example, when we toss a coin, how likely is it to come up a head or a tail?\n&gt; ½\nOr what is the probability of rolling a 3 on a fair six-sided die?\n&gt; ⅙\nNotation: P(X=3) = ⅙\nAn important characteristic of probability is that the probabilities of all events should always add to one.\nProbabilities are a way of assigning numbers to a set of mutually exclusive possibilities.\nLet’s look at two key terms that will come in handy in the future:",
+    "crumbs": [
+      "Bayesian Statistics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Probability</span>"
+    ]
+  },
+  {
+    "objectID": "zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.html#super-basics",
+    "href": "zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.html#super-basics",
+    "title": "3  Probability",
+    "section": "",
+    "text": "ie, if the probability of X being 3 is 1/6 , then the probability of X not being 3 is ⅚\n\n\nif P(X=3) = ⅙, then P(X!=3) = ⅚\n\n\nSum(both events) = 1",
+    "crumbs": [
+      "Bayesian Statistics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Probability</span>"
+    ]
+  },
+  {
+    "objectID": "zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.html#odds",
+    "href": "zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.html#odds",
+    "title": "3  Probability",
+    "section": "3.2 Odds",
+    "text": "3.2 Odds\nProbabilities can also be expressed in terms of odds.\nSo what does this mean exactly?\nIn our previous example of rolling a 3 on a fair six sided die, P(A) = ⅙\nThe odds for event A is then given as\n\\(O(A) = \\frac{P(A)}{P(A^c)} = \\frac{P(A)}{1-P(A)}\\)\n$O(A) = = $\nThis can also be written as 1:5 (or 5:1 odds against).\nSo if an event has a ⅙ probability of happening its odds are 1:5\nLet’s look at another example?\nImagine the probability of seeing a shooting star is 3/100\nTherefore, its odds are \\(O(A) = \\frac{3/100}{97/100}= \\frac{3}{97}=3:97\\)\nOr the odds against seeing a shooting star are 97:3\nSimilarly, an event with higher probability of ⅔ has 2:1 odds.\nUsing this information, we can also back calculate probabilities from odds.\nie. X:Y odds can be rewritten as \\(\\frac{X}{X+Y}\\)\nIn simpler terms, an event with 3:7 odds has a probability of \\(\\frac{3}{10}\\)\nLooking at the odds of Leicester city winning the English Premier League in 2016.\nThey had a 5000-1 odds against winning, which means odds of winning were 1:5000\n\\(P(winning) = \\frac{X}{X+Y} = \\frac{1}{5000+1}\\)\n\\(P(winning) = \\frac{1}{5001}\\)",
+    "crumbs": [
+      "Bayesian Statistics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Probability</span>"
+    ]
+  },
+  {
+    "objectID": "zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.html#expected-value",
+    "href": "zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.html#expected-value",
+    "title": "3  Probability",
+    "section": "3.3 Expected value",
+    "text": "3.3 Expected value\nIn simple terms, the expected value is the average of the variable.\nIn slightly more technical terms, the expected value of a random variable X is the weighted average of values X, where the weights are the probabilities of those values.\nIt’s adding up each possible value, but each value is multiplied by its chance of happening first.\nTaking the example of a fair sided die the expected value is\n\\(E(X) = \\frac{1}{6}*(1+2+3+4+5+6) = 3.5\\)\nSince each side is equally likely we sum up all the values and divide them by 6.",
     "crumbs": [
       "Bayesian Statistics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Probability</span>"
@@ -149,8 +182,19 @@
     "objectID": "zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.html#frameworks-for-defining-probabilities",
     "href": "zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.html#frameworks-for-defining-probabilities",
     "title": "3  Probability",
-    "section": "3.2 Frameworks for Defining Probabilities",
-    "text": "3.2 Frameworks for Defining Probabilities\nThere are two main frameworks we need to be aware of for defining probabilities 1. Frequentist framework\na. It’s all about probability in the long run. You have a hypothetical infinite sequence and then look at the frequency of outcomes in that hypothetical infinite sequence (if a die is rolled infinitely, probability of rolling a 2 is 1 in 6) 2. Bayesian framework\na. Based on personal perspective. Takes into account what you know about a particular problem\n\nWe will be using the Bayesian framework in our journey. ## Recommended Readings Bayesian Statistics: From Concept to Data Analysis (Coursera)",
+    "section": "3.4 Frameworks for Defining Probabilities",
+    "text": "3.4 Frameworks for Defining Probabilities\nThere are two main frameworks we need to be aware of for defining probabilities\n1. Frequentist framework\na. It’s all about probability in the long run. You have a hypothetical infinite sequence and then look at the frequency of outcomes in that hypothetical infinite sequence (if a die is rolled infinitely, probability of rolling a 2 is 1 in 6)\n3. Bayesian framework\na. Based on personal perspective. Takes into account what you know about a particular problem\n\nWe will be using the Bayesian framework in our journey.",
+    "crumbs": [
+      "Bayesian Statistics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Probability</span>"
+    ]
+  },
+  {
+    "objectID": "zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.html#recommended-readings",
+    "href": "zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.html#recommended-readings",
+    "title": "3  Probability",
+    "section": "3.5 Recommended Readings",
+    "text": "3.5 Recommended Readings\nBayesian Statistics: From Concept to Data Analysis (Coursera)",
     "crumbs": [
       "Bayesian Statistics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Probability</span>"

@@ -232,8 +232,11 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#expected-value" id="toc-expected-value" class="nav-link active" data-scroll-target="#expected-value"><span class="header-section-number">3.1</span> Expected value</a></li>
-  <li><a href="#frameworks-for-defining-probabilities" id="toc-frameworks-for-defining-probabilities" class="nav-link" data-scroll-target="#frameworks-for-defining-probabilities"><span class="header-section-number">3.2</span> Frameworks for Defining Probabilities</a></li>
+  <li><a href="#super-basics" id="toc-super-basics" class="nav-link active" data-scroll-target="#super-basics"><span class="header-section-number">3.1</span> Super Basics</a></li>
+  <li><a href="#odds" id="toc-odds" class="nav-link" data-scroll-target="#odds"><span class="header-section-number">3.2</span> Odds</a></li>
+  <li><a href="#expected-value" id="toc-expected-value" class="nav-link" data-scroll-target="#expected-value"><span class="header-section-number">3.3</span> Expected value</a></li>
+  <li><a href="#frameworks-for-defining-probabilities" id="toc-frameworks-for-defining-probabilities" class="nav-link" data-scroll-target="#frameworks-for-defining-probabilities"><span class="header-section-number">3.4</span> Frameworks for Defining Probabilities</a></li>
+  <li><a href="#recommended-readings" id="toc-recommended-readings" class="nav-link" data-scroll-target="#recommended-readings"><span class="header-section-number">3.5</span> Recommended Readings</a></li>
   </ul>
 </nav>
     </div>
@@ -259,14 +262,32 @@ window.Quarto = {
 </header>
 
 
-<p>We can’t do Bayesian Statistics without learning about probability first! Personally, I never found probability fun. I always struggled with those questions of finding the probability of landing 5 heads consecutively or the probability of picking one ace and two queens from three decks of cards etc. I know some of you may be thinking “oh, that’s so obvious, what’s so hard about probability”. If you are already familiar with probability and are comfortable with it feel free to skip this section, but for those of us that find it challenging, this might be worth a read. (I haven’t gone into great detail here though as the intention is to just introduce the concept). ## Super Basics Starting from scratch, let’s first define probability:<br>
+<p>We can’t do Bayesian Statistics without learning about probability first! Personally, I never found probability fun. I always struggled with those questions of finding the probability of landing 5 heads consecutively or the probability of picking one ace and two queens from three decks of cards etc. I know some of you may be thinking “oh, that’s so obvious, what’s so hard about probability”. If you are already familiar with probability and are comfortable with it feel free to skip this section, but for those of us that find it challenging, this might be worth a read. (I haven’t gone into great detail here though as the intention is to just introduce the concept).</p>
+<section id="super-basics" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="super-basics"><span class="header-section-number">3.1</span> Super Basics</h2>
+<p>Starting from scratch, let’s first define probability:<br>
 Probability is the chance of observing a certain event.</p>
-<p>For example, when we toss a coin, how likely is it to come up a head or a tail? &gt; ½</p>
-<p>Or what is the probability of rolling a 3 on a fair six-sided die? &gt; ⅙</p>
+<p>For example, when we toss a coin, how likely is it to come up a head or a tail?<br>
+&gt; ½</p>
+<p>Or what is the probability of rolling a 3 on a fair six-sided die?<br>
+&gt; ⅙</p>
 <p>Notation: P(X=3) = ⅙</p>
-<p>An important characteristic of probability is that the probabilities of all events should always add to one. * ie, if the probability of X being 3 is 1/6 , then the probability of X not being 3 is ⅚ * if P(X=3) = ⅙, then P(X!=3) = ⅚ * Sum(both events) = 1</p>
+<p>An important characteristic of probability is that the probabilities of all events should always add to one.</p>
+<ul>
+<li>ie, if the probability of X being 3 is 1/6 , then the probability of X not being 3 is ⅚<br>
+
+<ul>
+<li>if P(X=3) = ⅙, then P(X!=3) = ⅚<br>
+</li>
+</ul></li>
+<li>Sum(both events) = 1</li>
+</ul>
 <p>Probabilities are a way of assigning numbers to a set of mutually exclusive possibilities.</p>
-<p>Let’s look at two key terms that will come in handy in the future: ## Odds Probabilities can also be expressed in terms of odds.</p>
+<p>Let’s look at two key terms that will come in handy in the future:</p>
+</section>
+<section id="odds" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="odds"><span class="header-section-number">3.2</span> Odds</h2>
+<p>Probabilities can also be expressed in terms of odds.</p>
 <p>So what does this mean exactly?<br>
 In our previous example of rolling a 3 on a fair six sided die, P(A) = ⅙<br>
 The odds for event A is then given as</p>
@@ -282,12 +303,13 @@ Imagine the probability of seeing a shooting star is 3/100</p>
 <p>Using this information, we can also back calculate probabilities from odds.<br>
 ie. X:Y odds can be rewritten as <span class="math inline">\(\frac{X}{X+Y}\)</span></p>
 <p>In simpler terms, an event with 3:7 odds has a probability of <span class="math inline">\(\frac{3}{10}\)</span></p>
-<p>Looking at our previous example of Leicester city winning the Premier League.<br>
+<p>Looking at the odds of Leicester city winning the English Premier League in 2016.<br>
 They had a 5000-1 odds against winning, which means odds of winning were 1:5000</p>
 <p><span class="math inline">\(P(winning) = \frac{X}{X+Y} = \frac{1}{5000+1}\)</span></p>
 <p><span class="math inline">\(P(winning) = \frac{1}{5001}\)</span></p>
-<section id="expected-value" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="expected-value"><span class="header-section-number">3.1</span> Expected value</h2>
+</section>
+<section id="expected-value" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="expected-value"><span class="header-section-number">3.3</span> Expected value</h2>
 <p>In simple terms, the expected value is the <strong>average</strong> of the variable.</p>
 <p>In slightly more technical terms, the expected value of a random variable X is the weighted average of values X, where the weights are the probabilities of those values.</p>
 <p>It’s adding up each possible value, but each value is multiplied by its chance of happening first.</p>
@@ -295,13 +317,19 @@ They had a 5000-1 odds against winning, which means odds of winning were 1:5000<
 <span class="math inline">\(E(X) = \frac{1}{6}*(1+2+3+4+5+6) = 3.5\)</span><br>
 Since each side is equally likely we sum up all the values and divide them by 6.</p>
 </section>
-<section id="frameworks-for-defining-probabilities" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="frameworks-for-defining-probabilities"><span class="header-section-number">3.2</span> Frameworks for Defining Probabilities</h2>
-<p>There are two main frameworks we need to be aware of for defining probabilities 1. Frequentist framework<br>
-a. It’s all about probability in the long run. You have a hypothetical infinite sequence and then look at the frequency of outcomes in that hypothetical infinite sequence (if a die is rolled infinitely, probability of rolling a 2 is 1 in 6) 2. Bayesian framework<br>
+<section id="frameworks-for-defining-probabilities" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="frameworks-for-defining-probabilities"><span class="header-section-number">3.4</span> Frameworks for Defining Probabilities</h2>
+<p>There are two main frameworks we need to be aware of for defining probabilities<br>
+1. Frequentist framework<br>
+a. It’s all about probability in the long run. You have a hypothetical infinite sequence and then look at the frequency of outcomes in that hypothetical infinite sequence (if a die is rolled infinitely, probability of rolling a 2 is 1 in 6)<br>
+3. Bayesian framework<br>
 a. Based on personal perspective. Takes into account what you know about a particular problem<br>
 </p>
-<p>We will be using the Bayesian framework in our journey. ## Recommended Readings Bayesian Statistics: From Concept to Data Analysis (<a href="https://www.coursera.org/learn/bayesian-statistics/home/module/1">Coursera</a>)</p>
+<p>We will be using the Bayesian framework in our journey.</p>
+</section>
+<section id="recommended-readings" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="recommended-readings"><span class="header-section-number">3.5</span> Recommended Readings</h2>
+<p>Bayesian Statistics: From Concept to Data Analysis (<a href="https://www.coursera.org/learn/bayesian-statistics/home/module/1">Coursera</a>)</p>
 
 
 </section>
