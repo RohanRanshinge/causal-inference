@@ -4,19 +4,21 @@ Alright! Earlier we covered Bayesian statistics and a bit of probability - now l
 
 **The almighty Bayes’ theorem!**
 
-Bayes’ theorem is literally the backbone of this field (no points for guessing where the name Bayesian Statistics comes).
+Bayes’ theorem is literally the backbone of this field (no points for guessing where the name Bayesian Statistics comes from).
 
 Bayes theorem is based on conditional probability.\
 i.e. finding the probability of event A happening, given we know event B already happened.
 
 Let’s first see an example to understand conditional probability!
+
 ## Challenge 1: Sorting the Staff
+
 *Q) There are 20 employees at a company, 12 of whom are female.
 There are 10 PhDs, of which 6 are female.
 What is the probability of being a female given they have a PhD?*
 
-You can solve this mentally too but let’s try to solve this using a simple table.
-Based on the data given to us we can create the below table:
+You can solve this mentally too but let’s try to solve this using a simple table.\
+Based on the data given to us we can create the below table:\
 Our job is to find the missing data values. As you can see this is fairly easy to solve -
 
 Based on the data given to us we can create the following table:
@@ -46,7 +48,7 @@ $P(A|B) = \frac{P(A ∩ B)}{P(B)}$
 
 Substituting the above equation with our example we get,
 
-P(F|PhD) = $\frac{P(F ∩ PhD)}{P(PhD)}$ 
+$P(F|PhD) = \frac{P(F ∩ PhD)}{P(PhD)}$ 
 
 Translating the above equation in English you will see it matches our earlier statement: \
 From the universe of PhDs (denominator) we want to find all those that are female AND have a PhD (numerator).
@@ -92,23 +94,23 @@ $P(B|A) * P(A) = P(A \cap B)$
 Since both the RHS values on the above equations are the same we know these equations are equal.  
 
 Therefore,  
-$P(A|B) * P(B) = P(B|A) * P(A) $
+$P(A|B) * P(B) = P(B|A) * P(A)$
 
-
-$P(A|B) = \frac{P(B|A) * P(A)}{P(B)}$
+$$P(A|B) = \frac{P(B|A) * P(A)}{P(B)}$$
 
 **This is the Bayes theorem!**
 
 Why is this so great? Because if we are given the conditional probability of one event, we can use the theorem to find the conditional probability in the opposite direction.  
 I.e. if we know P(B|A) we can find P(A|B)
 
-The numerator of the Bayes’ rule is the joint probability P(A  B), and the denominator is the marginal probability P(B)
+The numerator of the Bayes’ rule is the joint probability P(A ∩ B), and the denominator is the marginal probability P(B)
 
 ## The Hidden Constant: Finding the denominator in Bayes' theorem
 How do we calculate the denominator in Bayes theorem?
 For P(B) think from a venn diagram POV
 
-![Alt text](images/P(B)-venn-diagram.jpg?raw)
+![Alt text](/zero-to-hero-bsts/PART_I-Bayesian-Statistics/images/P(B)-venn-diagram.jpg?raw)
+
 
 The denominator P(B) in the theorem can be expressed as  
 $$P(B) = P(B \cap A) + P(B \cap \bar{A})$$   
@@ -144,14 +146,14 @@ We already have the values of the numerator. The objective then becomes to find 
 What is the probability of testing positive?  
 $P(+) = P(+ \cap BC) + P(+ \cap \bar{BC})$	                      …remember the venn diagram earlier?
 
-$P(+ \cap BC) = P(+|BC) * P(BC) 		= 0.8 * 0.01 = 0.008 $  
-$P(+ \cap \bar{BC}) = P(+| \bar{BC}) * P( \bar{BC}) 	= 0.096 * 0.99 = 0.0905 $
+$P(+ \cap BC) = P(+|BC) * P(BC) 		= 0.8 * 0.01 = 0.008$  
+$P(+ \cap \bar{BC}) = P(+| \bar{BC}) * P( \bar{BC}) 	= 0.096 * 0.99 = 0.0905$
 
 Therefore,  
 $P(+) = 0.008+0.0905 = 0.10304$
 
 Plugging this value back in to the bayes theorem we get -  
-$P(BC|+) = \frac{0.8 * 0.01}{0.10304} = 7.7\\% $
+$P(BC|+) = \frac{0.8 * 0.01}{0.10304} = 7.7\%$
 
 Turns out, even if you test positive, there’s only a **7.7%** chance you actually have cancer! Crazy, right?!  
 Isn’t that so counterintuitive!? We just saw that when you truly have breast cancer, the test gives a positive result 80% of the time but when we reverse the probability, we see that if we test positive on a test, the probability of you actually having cancer is just 7.7% !!  
@@ -168,6 +170,7 @@ From the question we also know P(+|~BC) = 9.6% = 0.096
 $P(+ \cap \bar{BC}) = P(+| \bar{BC}) * P(\bar{BC}) = 0.096*0.99 = 0.095$
 
 Let’s put these values in a table
+
 | | Cancer | No Cancer | Total
 |-| -------|------|------|
 **Positive**|0.008|0.095|0.103 |
@@ -177,7 +180,7 @@ Let’s put these values in a table
 Using Bayes theorem,  
 $P(BC|+) = \frac{P(+|BC) * P(BC)}{P(+)}$  
 
-$P(BC|+) = \frac{(0.008 /0.01) * 0.01}{0.10304} = 7.7\\% $  
+$P(BC|+) = \frac{(0.008 /0.01) * 0.01}{0.10304} = 7.7\%$  
 
 We were given the probability of a positive result given a cancer condition and using Bayes theorem we were able to find the probability of cancer given we had a positive result.
 
