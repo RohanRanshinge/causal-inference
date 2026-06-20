@@ -232,11 +232,12 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#deriving-the-bayes-theorem" id="toc-deriving-the-bayes-theorem" class="nav-link active" data-scroll-target="#deriving-the-bayes-theorem"><span class="header-section-number">4.1</span> Deriving the Bayes Theorem</a></li>
-  <li><a href="#the-hidden-constant-finding-the-denominator-in-bayes-theorem" id="toc-the-hidden-constant-finding-the-denominator-in-bayes-theorem" class="nav-link" data-scroll-target="#the-hidden-constant-finding-the-denominator-in-bayes-theorem"><span class="header-section-number">4.2</span> The Hidden Constant: Finding the denominator in Bayes’ theorem</a></li>
-  <li><a href="#challenge-2-positive-result-uncertain-reality-decoding-cancer-probability" id="toc-challenge-2-positive-result-uncertain-reality-decoding-cancer-probability" class="nav-link" data-scroll-target="#challenge-2-positive-result-uncertain-reality-decoding-cancer-probability"><span class="header-section-number">4.3</span> Challenge 2: Positive Result, Uncertain Reality: Decoding Cancer Probability</a></li>
-  <li><a href="#mission-complete-summary" id="toc-mission-complete-summary" class="nav-link" data-scroll-target="#mission-complete-summary"><span class="header-section-number">4.4</span> Mission Complete: Summary</a></li>
-  <li><a href="#skill-tree-extensions-recommended-readings" id="toc-skill-tree-extensions-recommended-readings" class="nav-link" data-scroll-target="#skill-tree-extensions-recommended-readings"><span class="header-section-number">4.5</span> Skill Tree Extensions: Recommended Readings</a></li>
+  <li><a href="#challenge-1-sorting-the-staff" id="toc-challenge-1-sorting-the-staff" class="nav-link active" data-scroll-target="#challenge-1-sorting-the-staff"><span class="header-section-number">4.1</span> Challenge 1: Sorting the Staff</a></li>
+  <li><a href="#deriving-the-bayes-theorem" id="toc-deriving-the-bayes-theorem" class="nav-link" data-scroll-target="#deriving-the-bayes-theorem"><span class="header-section-number">4.2</span> Deriving the Bayes Theorem</a></li>
+  <li><a href="#the-hidden-constant-finding-the-denominator-in-bayes-theorem" id="toc-the-hidden-constant-finding-the-denominator-in-bayes-theorem" class="nav-link" data-scroll-target="#the-hidden-constant-finding-the-denominator-in-bayes-theorem"><span class="header-section-number">4.3</span> The Hidden Constant: Finding the denominator in Bayes’ theorem</a></li>
+  <li><a href="#challenge-2-positive-result-uncertain-reality-decoding-cancer-probability" id="toc-challenge-2-positive-result-uncertain-reality-decoding-cancer-probability" class="nav-link" data-scroll-target="#challenge-2-positive-result-uncertain-reality-decoding-cancer-probability"><span class="header-section-number">4.4</span> Challenge 2: Positive Result, Uncertain Reality: Decoding Cancer Probability</a></li>
+  <li><a href="#mission-complete-summary" id="toc-mission-complete-summary" class="nav-link" data-scroll-target="#mission-complete-summary"><span class="header-section-number">4.5</span> Mission Complete: Summary</a></li>
+  <li><a href="#skill-tree-extensions-recommended-readings" id="toc-skill-tree-extensions-recommended-readings" class="nav-link" data-scroll-target="#skill-tree-extensions-recommended-readings"><span class="header-section-number">4.6</span> Skill Tree Extensions: Recommended Readings</a></li>
   </ul>
 </nav>
     </div>
@@ -264,11 +265,16 @@ window.Quarto = {
 
 <p>Alright! Earlier we covered Bayesian statistics and a bit of probability - now let’s get into the most important theorem of all!</p>
 <p><strong>The almighty Bayes’ theorem!</strong></p>
-<p>Bayes’ theorem is literally the backbone of this field (no points for guessing where the name Bayesian Statistics comes).</p>
+<p>Bayes’ theorem is literally the backbone of this field (no points for guessing where the name Bayesian Statistics comes from).</p>
 <p>Bayes theorem is based on conditional probability.<br>
 i.e.&nbsp;finding the probability of event A happening, given we know event B already happened.</p>
-<p>Let’s first see an example to understand conditional probability! ## Challenge 1: Sorting the Staff <em>Q) There are 20 employees at a company, 12 of whom are female. There are 10 PhDs, of which 6 are female. What is the probability of being a female given they have a PhD?</em></p>
-<p>You can solve this mentally too but let’s try to solve this using a simple table. Based on the data given to us we can create the below table: Our job is to find the missing data values. As you can see this is fairly easy to solve -</p>
+<p>Let’s first see an example to understand conditional probability!</p>
+<section id="challenge-1-sorting-the-staff" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="challenge-1-sorting-the-staff"><span class="header-section-number">4.1</span> Challenge 1: Sorting the Staff</h2>
+<p><em>Q) There are 20 employees at a company, 12 of whom are female. There are 10 PhDs, of which 6 are female. What is the probability of being a female given they have a PhD?</em></p>
+<p>You can solve this mentally too but let’s try to solve this using a simple table.<br>
+Based on the data given to us we can create the below table:<br>
+Our job is to find the missing data values. As you can see this is fairly easy to solve -</p>
 <p>Based on the data given to us we can create the following table:</p>
 <table class="caption-top table">
 <thead>
@@ -338,7 +344,7 @@ That equates to, <strong>P(F|PhD) = 6/10</strong></p>
 <p>We can arrive at the same conclusion in a different way using conditional probabilities which is given as,</p>
 <p><span class="math inline">\(P(A|B) = \frac{P(A ∩ B)}{P(B)}\)</span></p>
 <p>Substituting the above equation with our example we get,</p>
-<p>P(F|PhD) = <span class="math inline">\(\frac{P(F ∩ PhD)}{P(PhD)}\)</span></p>
+<p><span class="math inline">\(P(F|PhD) = \frac{P(F ∩ PhD)}{P(PhD)}\)</span></p>
 <p>Translating the above equation in English you will see it matches our earlier statement:<br>
 From the universe of PhDs (denominator) we want to find all those that are female AND have a PhD (numerator).</p>
 <p>Let’s find each of the elements in this equation:<br>
@@ -354,8 +360,9 @@ P(F ∩ PhD) = <span class="math inline">\(\frac{6}{20} = \frac{3}{10}\)</span> 
 P(F|PhD) <span class="math inline">\(= \frac{P(F ∩ PhD)}{P(PhD)}\)</span></p>
 <p>P(F|PhD) <span class="math inline">\(= \frac{3/10}{1/2} = \frac{6}{10}\)</span> … conditional probability</p>
 <p>This matches the answer we had seen earlier. This was just a different way to get to it.</p>
-<section id="deriving-the-bayes-theorem" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="deriving-the-bayes-theorem"><span class="header-section-number">4.1</span> Deriving the Bayes Theorem</h2>
+</section>
+<section id="deriving-the-bayes-theorem" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="deriving-the-bayes-theorem"><span class="header-section-number">4.2</span> Deriving the Bayes Theorem</h2>
 <p>Okay, now that we have seen that example let’s look at some equations and derive the Bayes theorem</p>
 <p>In mathematical form, the conditional probability is given as:</p>
 <p><span class="math inline">\(P(A|B) = \frac{P(A \cap B)}{P(B)}\)</span> … eqn(1)</p>
@@ -367,19 +374,19 @@ Therefore, <span class="math inline">\(P(A|B) * P(B) = P(A \cap B)\)</span></p>
 <span class="math inline">\(P(B|A) * P(A) = P(A \cap B)\)</span></p>
 <p>Since both the RHS values on the above equations are the same we know these equations are equal.</p>
 <p>Therefore,<br>
-$P(A|B) * P(B) = P(B|A) * P(A) $</p>
-<p><span class="math inline">\(P(A|B) = \frac{P(B|A) * P(A)}{P(B)}\)</span></p>
+<span class="math inline">\(P(A|B) * P(B) = P(B|A) * P(A)\)</span></p>
+<p><span class="math display">\[P(A|B) = \frac{P(B|A) * P(A)}{P(B)}\]</span></p>
 <p><strong>This is the Bayes theorem!</strong></p>
 <p>Why is this so great? Because if we are given the conditional probability of one event, we can use the theorem to find the conditional probability in the opposite direction.<br>
 I.e. if we know P(B|A) we can find P(A|B)</p>
-<p>The numerator of the Bayes’ rule is the joint probability P(A B), and the denominator is the marginal probability P(B)</p>
+<p>The numerator of the Bayes’ rule is the joint probability P(A ∩ B), and the denominator is the marginal probability P(B)</p>
 </section>
-<section id="the-hidden-constant-finding-the-denominator-in-bayes-theorem" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="the-hidden-constant-finding-the-denominator-in-bayes-theorem"><span class="header-section-number">4.2</span> The Hidden Constant: Finding the denominator in Bayes’ theorem</h2>
+<section id="the-hidden-constant-finding-the-denominator-in-bayes-theorem" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="the-hidden-constant-finding-the-denominator-in-bayes-theorem"><span class="header-section-number">4.3</span> The Hidden Constant: Finding the denominator in Bayes’ theorem</h2>
 <p>How do we calculate the denominator in Bayes theorem? For P(B) think from a venn diagram POV</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/P(B)-venn-diagram.jpg?raw" class="img-fluid figure-img"></p>
+<p><img src="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/images/P(B)-venn-diagram.jpg?raw" class="img-fluid figure-img"></p>
 <figcaption>Alt text</figcaption>
 </figure>
 </div>
@@ -392,8 +399,8 @@ Similarly,<br>
 <p>Therefore P(B) can be rewritten as, <span class="math display">\[P(B) = P(B|A) * P(A) + P(B|\bar{A}) * P(\bar{A})\]</span></p>
 <p>Okay so what? Let’s see an example to understand why this is useful!</p>
 </section>
-<section id="challenge-2-positive-result-uncertain-reality-decoding-cancer-probability" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="challenge-2-positive-result-uncertain-reality-decoding-cancer-probability"><span class="header-section-number">4.3</span> Challenge 2: Positive Result, Uncertain Reality: Decoding Cancer Probability</h2>
+<section id="challenge-2-positive-result-uncertain-reality-decoding-cancer-probability" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="challenge-2-positive-result-uncertain-reality-decoding-cancer-probability"><span class="header-section-number">4.4</span> Challenge 2: Positive Result, Uncertain Reality: Decoding Cancer Probability</h2>
 <p>Yudkowsky in his Bayes article has given a great example - let’s have a look<br>
 <em>Q) 1% of women at age forty who participate in routine screening have breast cancer. 80% of women with breast cancer will get positive mammographies. 9.6% of women without breast cancer will also get positive mammographies. A woman in this age group had a positive mammography in a routine screening. What is the probability that she actually has breast cancer?</em></p>
 <p>Let’s write this down -<br>
@@ -408,12 +415,12 @@ Using Bayes theorem,<br>
 <p>We already have the values of the numerator. The objective then becomes to find the denominator and we are done!</p>
 <p>What is the probability of testing positive?<br>
 <span class="math inline">\(P(+) = P(+ \cap BC) + P(+ \cap \bar{BC})\)</span> …remember the venn diagram earlier?</p>
-<p>$P(+ BC) = P(+|BC) * P(BC) = 0.8 * 0.01 = 0.008 $<br>
-$P(+ {BC}) = P(+| {BC}) * P( {BC}) = 0.096 * 0.99 = 0.0905 $</p>
+<p><span class="math inline">\(P(+ \cap BC) = P(+|BC) * P(BC)         = 0.8 * 0.01 = 0.008\)</span><br>
+<span class="math inline">\(P(+ \cap \bar{BC}) = P(+| \bar{BC}) * P( \bar{BC})     = 0.096 * 0.99 = 0.0905\)</span></p>
 <p>Therefore,<br>
 <span class="math inline">\(P(+) = 0.008+0.0905 = 0.10304\)</span></p>
 <p>Plugging this value back in to the bayes theorem we get -<br>
-$P(BC|+) = = 7.7\% $</p>
+<span class="math inline">\(P(BC|+) = \frac{0.8 * 0.01}{0.10304} = 7.7\%\)</span></p>
 <p>Turns out, even if you test positive, there’s only a <strong>7.7%</strong> chance you actually have cancer! Crazy, right?!<br>
 Isn’t that so counterintuitive!? We just saw that when you truly have breast cancer, the test gives a positive result 80% of the time but when we reverse the probability, we see that if we test positive on a test, the probability of you actually having cancer is just 7.7% !!<br>
 Not convinced? Let’s look at this using tables</p>
@@ -424,22 +431,52 @@ Using these two values we can find <span class="math inline">\(P(+ \cap BC)\)</s
 <span class="math inline">\(P(+ \cap BC) = P(+|BC) * P(BC) = 0.8*0.01 = 0.008\)</span></p>
 <p>From the question we also know P(+|~BC) = 9.6% = 0.096<br>
 <span class="math inline">\(P(+ \cap \bar{BC}) = P(+| \bar{BC}) * P(\bar{BC}) = 0.096*0.99 = 0.095\)</span></p>
-<p>Let’s put these values in a table | | Cancer | No Cancer | Total |-| ——-|——|——| <strong>Positive</strong>|0.008|0.095|0.103 | <strong>Negative</strong>|0.002|0.895|0.897 | <strong>Total</strong>|0.01|0.99|1 |</p>
+<p>Let’s put these values in a table</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>Cancer</th>
+<th>No Cancer</th>
+<th>Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Positive</strong></td>
+<td>0.008</td>
+<td>0.095</td>
+<td>0.103</td>
+</tr>
+<tr class="even">
+<td><strong>Negative</strong></td>
+<td>0.002</td>
+<td>0.895</td>
+<td>0.897</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td>0.01</td>
+<td>0.99</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
 <p>Using Bayes theorem,<br>
 <span class="math inline">\(P(BC|+) = \frac{P(+|BC) * P(BC)}{P(+)}\)</span></p>
-<p>$P(BC|+) = = 7.7\% $</p>
+<p><span class="math inline">\(P(BC|+) = \frac{(0.008 /0.01) * 0.01}{0.10304} = 7.7\%\)</span></p>
 <p>We were given the probability of a positive result given a cancer condition and using Bayes theorem we were able to find the probability of cancer given we had a positive result.</p>
 </section>
-<section id="mission-complete-summary" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="mission-complete-summary"><span class="header-section-number">4.4</span> Mission Complete: Summary</h2>
+<section id="mission-complete-summary" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="mission-complete-summary"><span class="header-section-number">4.5</span> Mission Complete: Summary</h2>
 <p>In this chapter we saw the almighty Bayes theorem and derived it too.<br>
 Remember, whenever you are given the probability of one direction and are asked the probability of the other direction you can use the Bayes theorem.</p>
 <p>Alright! Let’s recap the main equations we need to be aware of</p>
 <p><span class="math display">\[P(A|B) = \frac{P(A ∩ B)}{P(B)}\]</span> <span class="math display">\[P(A|B) = \frac{P(B|A) * P(A)}{P(B)}\]</span> <span class="math display">\[P(A|B) = \frac{P(B|A) * P(A)}{P(B \cap A) + P(B \cap \bar{A})}\]</span> <span class="math display">\[P(A|B) = \frac{P(B|A) * P(A)}{P(B | A) * P(A) + P(B | \bar{A}) * P(\bar{A})}\]</span></p>
 <p>These are multiple ways of writing the same equation!</p>
 </section>
-<section id="skill-tree-extensions-recommended-readings" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="skill-tree-extensions-recommended-readings"><span class="header-section-number">4.5</span> Skill Tree Extensions: Recommended Readings</h2>
+<section id="skill-tree-extensions-recommended-readings" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="skill-tree-extensions-recommended-readings"><span class="header-section-number">4.6</span> Skill Tree Extensions: Recommended Readings</h2>
 <ol type="1">
 <li>Yudkowsky’s Bayes <a href="https://www.yudkowsky.net/rational/bayes">article</a> [HIGHLY RECOMMEND!!!]</li>
 <li>Bayesian Statistics the Fun Way <a href="https://a.co/d/dLdYfSo">book</a> (Will Kurt)</li>
