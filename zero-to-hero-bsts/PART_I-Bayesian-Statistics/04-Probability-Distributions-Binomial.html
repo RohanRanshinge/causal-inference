@@ -304,7 +304,12 @@ window.Quarto = {
 
 <p><a href="https://colab.research.google.com/github/RohanRanshinge/causal-inference/blob/main/zero-to-hero-bsts/PART_I-Bayesian-Statistics/04-Probability-Distributions-Binomial.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
 <p>Probability distributions describe the likelihood of different outcomes for a random event.</p>
-<p>Here are a few ways to think about it: * It’s a comprehensive description of the possible values a random variable can take and the probabilities associated with each of these values. * It can be viewed as a complete list of all potential outcomes, along with their respective probabilities. * Probability distributions offer a visual representation of all possible events and the probability of each occurring.</p>
+<p>Here are a few ways to think about it:</p>
+<ul>
+<li>It’s a comprehensive description of the possible values a random variable can take and the probabilities associated with each of these values.</li>
+<li>It can be viewed as a complete list of all potential outcomes, along with their respective probabilities.</li>
+<li>Probability distributions offer a visual representation of all possible events and the probability of each occurring.</li>
+</ul>
 <section id="probability-mass-function-pmf" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="probability-mass-function-pmf"><span class="header-section-number">6.1</span> Probability Mass Function (PMF)</h2>
 <p>A Probability Mass Function (PMF) is a function that provides the probability that a discrete random variable is exactly equal to a specific value.</p>
@@ -314,23 +319,45 @@ window.Quarto = {
 <section id="bernoulli-distribution" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="bernoulli-distribution"><span class="header-section-number">6.2</span> Bernoulli Distribution</h2>
 <p>The Bernoulli distribution is a discrete probability distribution that models a single trial of an experiment with precisely two possible outcomes: success or failure. It’s useful for situations where an event either happens or does not.</p>
-<p>We can try understanding it using a coin flip: * Let k = 1 for heads (success) * k = 0 for tails (failure)</p>
-<p>If p represents the probability of getting heads (success), then: * The probability of getting heads: <span class="math inline">\(P(k=1|p) = p\)</span> * And the probability of getting tails: <span class="math inline">\(P(k=0|p) = 1-p\)</span></p>
-<p>Combining these, the Probability Mass Function (PMF) for the Bernoulli distribution is given by: <span class="math display">\[P(k|p) = p^k *(1-p)^{1-k}\]</span> Where * When k=1 (heads), the PMF simplifies to <span class="math inline">\(p\)</span> * When k=0 (tails), the PMF simplifies to <span class="math inline">\(1-p\)</span></p>
+<p>We can try understanding it using a coin flip:</p>
+<ul>
+<li>Let k = 1 for heads (success)</li>
+<li>k = 0 for tails (failure)</li>
+</ul>
+<p>If p represents the probability of getting heads (success), then:</p>
+<ul>
+<li>The probability of getting heads: <span class="math inline">\(P(k=1|p) = p\)</span></li>
+<li>And the probability of getting tails: <span class="math inline">\(P(k=0|p) = 1-p\)</span></li>
+</ul>
+<p>Combining these, the Probability Mass Function (PMF) for the Bernoulli distribution is given by: <span class="math display">\[P(k|p) = p^k *(1-p)^{1-k}\]</span> Where</p>
+<ul>
+<li>When k=1 (heads), the PMF simplifies to <span class="math inline">\(p\)</span></li>
+<li>When k=0 (tails), the PMF simplifies to <span class="math inline">\(1-p\)</span></li>
+</ul>
 <p>This equation is also referred to as the <strong>likelihood function</strong>.</p>
 <p>Note: A Bernoulli distribution is a special case of the binomial distribution where the number of trials n=1 (this will make sense in the next section)</p>
 </section>
 <section id="binomial-distribution" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="binomial-distribution"><span class="header-section-number">6.3</span> Binomial Distribution</h2>
 <p>Remember those questions we would get asked on what’s the probability of getting exactly 5 heads in 10 coin tosses etc? Well it’s time to solve them!</p>
-<p>Enter Binomial Distributions!</p>
+<p>Enter <strong><em>Binomial Distributions!</em></strong></p>
 <p>The Binomial distribution is a discrete probability distribution that calculates the probability of obtaining a certain number of successful outcomes (k) in a fixed number of independent trials (n), given a constant probability of success (p) for each trial.</p>
 <p>It displays all possible outcomes of k successes, within n trials with p probability. <em>(If this sounds confusing, don’t fret the example below should clear it up)</em></p>
 <p><strong>“Bi”</strong> in binomial refers to the two possible outcomes that we are concerned with: an event happening (success) or an event not happening (failure).</p>
-<p>All binomial distributions contain three parameters: * <strong>k</strong>: The number of outcomes we care about. * <strong>n</strong>: The number of trials * <strong>p</strong>: The probability of success on a single trial.</p>
+<p>All binomial distributions contain three parameters:</p>
+<ul>
+<li><strong>k</strong>: The number of outcomes we care about.</li>
+<li><strong>n</strong>: The number of trials</li>
+<li><strong>p</strong>: The probability of success on a single trial.</li>
+</ul>
 <p>The Binomial Probability Mass Function (PMF) is given by:</p>
 <p><span class="math display">\[B(k;n,p) =\binom{n}{k} *p^k *(1-p)^{n-k} \]</span> <span class="math display">\[where \binom{n}{k} = \frac{n!}{k!  (n-k)!}\]</span></p>
-<p>Let’s break this equation down: * <span class="math inline">\(p^k\)</span> represents the probability of observing k independent successes in one experiment. * <span class="math inline">\((1-p)^{n-k}\)</span> represents the probability of observing (n-k) failures together. * <span class="math inline">\(\binom{n}{k}\)</span> (also written as nCk or (n choose k)) is the binomial coefficient. This term accounts for all possible combinations in which k successes can occur within n trials.</p>
+<p>Let’s break this equation down:</p>
+<ul>
+<li><span class="math inline">\(p^k\)</span> represents the probability of observing k independent successes in one experiment.</li>
+<li><span class="math inline">\((1-p)^{n-k}\)</span> represents the probability of observing (n-k) failures together.</li>
+<li><span class="math inline">\(\binom{n}{k}\)</span> (also written as nCk or (n choose k)) is the binomial coefficient. This term accounts for all possible combinations in which k successes can occur within n trials.</li>
+</ul>
 <p>We typically describe a Binomial process using the notation:<br>
 <span class="math inline">\(Y \sim \text{Binomial}(n, p)\)</span><br>
 where <span class="math inline">\(\sim\)</span> stands for “is distributed as”</p>
@@ -343,7 +370,7 @@ where <span class="math inline">\(\sim\)</span> stands for “is distributed as�
 </ol>
 <p>Using the above equation we can solve for any probabilities that have just 2 outcomes.<br>
 For eg: <strong><em>what is the probability of getting 5 heads in 10 coin tosses?</em></strong></p>
-<p>$B(5;10,1/2) = <em>(1/2)^5 </em>(1/2)^{10-5} $</p>
+<p><span class="math inline">\(B(5;10,1/2) =\binom{10}{5} *(1/2)^5 *(1/2)^{10-5}\)</span></p>
 </section>
 <section id="plotting-the-binomial-distribution" class="level3" data-number="6.3.2">
 <h3 data-number="6.3.2" class="anchored" data-anchor-id="plotting-the-binomial-distribution"><span class="header-section-number">6.3.2</span> Plotting the Binomial Distribution</h3>
@@ -360,14 +387,27 @@ For eg: <strong><em>what is the probability of getting 5 heads in 10 coin tosses
 <section id="wait-why-is-this-not-50" class="level3" data-number="6.3.3">
 <h3 data-number="6.3.3" class="anchored" data-anchor-id="wait-why-is-this-not-50"><span class="header-section-number">6.3.3</span> Wait, why is this not 50%?</h3>
 <p>This is a great question! Afterall, if the probability of heads is 50% and I toss a coin 10 times, then the probability of getting 5 heads should be 50% right?<br>
-What you are thinking of is the expected value or the average result over many trials, but not the probability of a specific outcome. * <strong>Expected Value</strong> * When you flip a coin 10 times, the expected number of heads is 5. This is because, on average, a fair coin will land on heads 50% of the time * However, the probability of getting exactly 5 heads in those 10 flips is different from the overall average. * <strong>Many Possible Outcomes</strong> * When you toss a coin 10 times, there are 2^10 or 1024 possible sequences of heads and tails (e.g., HHHHHHHHHH, HHTHTTTHTH, etc.). * Only some of these sequences will have exactly 5 heads and 5 tails. * The calculation you saw before counts the number of ways to arrange 5 heads and 5 tails in a sequence of 10 flips.</p>
+What you are thinking of is the expected value or the average result over many trials, but not the probability of a specific outcome.</p>
+<ul>
+<li><strong>Expected Value</strong>
+<ul>
+<li>When you flip a coin 10 times, the expected number of heads is 5. This is because, on average, a fair coin will land on heads 50% of the time</li>
+<li>However, the probability of getting exactly 5 heads in those 10 flips is different from the overall average.</li>
+</ul></li>
+<li><strong>Many Possible Outcomes</strong>
+<ul>
+<li>When you toss a coin 10 times, there are 2^10 or 1024 possible sequences of heads and tails (e.g., HHHHHHHHHH, HHTHTTTHTH, etc.).</li>
+<li>Only some of these sequences will have exactly 5 heads and 5 tails.</li>
+<li>The calculation you saw before counts the number of ways to arrange 5 heads and 5 tails in a sequence of 10 flips.</li>
+</ul></li>
+</ul>
 <p>When you put this together you get 24.6%</p>
 </section>
 <section id="plotting-the-binomial-distribution-1" class="level3" data-number="6.3.4">
 <h3 data-number="6.3.4" class="anchored" data-anchor-id="plotting-the-binomial-distribution-1"><span class="header-section-number">6.3.4</span> Plotting the Binomial Distribution</h3>
 <p>Remember at the start of this chapter I had said, probability distributions offer a visual representation of all possible events and the probability of each occurring.</p>
 <p>So how would we visualize this?</p>
-<p>Well the above equation now allows us to calculate the probability for any k successes using a fixed n and p.</p>
+<p>The above equation now allows us to calculate the probability for any k successes using a fixed n and p.</p>
 <div id="cell-7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:564}}" data-outputid="1fe347e7-36bc-4df5-e10c-4797802f7b59">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -550,7 +590,8 @@ An e-commerce website has a 2% conversion rate. If they have 500 visitors in a d
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">10</span>   <span class="co"># Number of purchases we are interested in (number of successes)</span></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># We want the probability of getting exactly 10 purchases, which is P(X = 10).</span></span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>result_ecommerce <span class="op">=</span> binom.pmf(k, n, p)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Example 1 (E-commerce): The probability of exactly </span><span class="sc">{</span>k<span class="sc">}</span><span class="ss"> purchases out of </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> visitors with a conversion rate of </span><span class="sc">{</span>p<span class="op">*</span><span class="dv">100</span><span class="sc">}</span><span class="ss">% is: </span><span class="sc">{</span>result_ecommerce<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Example 1 (E-commerce): The probability of exactly </span><span class="sc">{</span>k<span class="sc">}</span><span class="ss"> purchases out of </span><span class="ch">\n</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="er">{n} visitors with a conversion rate of {p*100}% is: {result_ecommerce}")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Example 1 (E-commerce): The probability of exactly 10 purchases out of 500 visitors with a conversion rate of 2.0% is: 0.12637979106893046</code></pre>
 </div>
@@ -564,7 +605,8 @@ You pick 20 stocks, and there is a 5% chance that any single stock will be a “
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="dv">3</span>   <span class="co"># Number of "10x baggers" we are interested in (number of successes)</span></span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># We want the probability of getting exactly 3 "10x baggers", which is P(X = 3).</span></span>
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>result_stocks <span class="op">=</span> binom.pmf(k, n, p)</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Example 2 (Stock Market): The probability of picking exactly </span><span class="sc">{</span>k<span class="sc">}</span><span class="ss"> '10x baggers' out of </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> stocks with a </span><span class="sc">{</span>p<span class="op">*</span><span class="dv">100</span><span class="sc">}</span><span class="ss">% chance for each is: </span><span class="sc">{</span>result_stocks<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Example 2 (Stock Market): The probability of picking exactly </span><span class="sc">{</span>k<span class="sc">}</span><span class="ss"> '10x </span><span class="ch">\n</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="er">baggers' out of {n} stocks with a {p*100}% chance for each is: {result_stocks}")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Example 2 (Stock Market): The probability of picking exactly 3 '10x baggers' out of 20 stocks with a 5.0% chance for each is: 0.05958214776873281</code></pre>
 </div>
@@ -578,7 +620,8 @@ You are taking a multiple-choice test with 15 questions, and each question has 4
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># We want the probability of getting at least 8 questions correct, which is P(X &gt;= 8).</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># This is equal to 1 - P(X &lt;= 7).</span></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>probability_scenario1 <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> binom.cdf(<span class="dv">7</span>, n, p)</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The probability of getting at least 8 questions correct when guessing on 15 questions with 4 options each is: </span><span class="sc">{</span>probability_scenario1<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The probability of getting at least 8 questions correct when guessing on </span><span class="ch">\n</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="er">15 questions with 4 options each is: {probability_scenario1}")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>The probability of getting at least 8 questions correct when guessing on 15 questions with 4 options each is: 0.017299838364124298</code></pre>
 </div>
@@ -593,12 +636,15 @@ You are taking a multiple-choice test with 15 questions, and each question has 4
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># This is equal to 1 - P(X &lt; 8) = 1 - P(X &lt;= 7).</span></span>
 <span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># So, we calculate the CDF at k=7 and subtract it from 1.</span></span>
 <span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>probability_scenario2 <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> binom.cdf(<span class="dv">7</span>, n_scenario2, p_scenario2)</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The probability of getting at least 8 out of </span><span class="sc">{</span>n_scenario2<span class="sc">}</span><span class="ss"> questions correct with a </span><span class="sc">{</span><span class="bu">round</span>(p_scenario2<span class="op">*</span><span class="dv">100</span>, <span class="dv">2</span>)<span class="sc">}</span><span class="ss">% chance per question is: </span><span class="sc">{</span>probability_scenario2<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Compare the probabilities</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> probability_scenario2 <span class="op">&gt;=</span> <span class="dv">2</span> <span class="op">*</span> probability_scenario1:</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">You are at least twice as likely to get at least 8 questions correct in the second scenario."</span>)</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">You are not twice as likely to get at least 8 questions correct in the second scenario."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The probability of getting at least 8 out of </span><span class="sc">{</span>n_scenario2<span class="sc">}</span><span class="ss"> questions correct </span><span class="ch">\n</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="er">with a {round</span>(p_scenario2<span class="op">*</span><span class="dv">100</span>, <span class="dv">2</span>)}<span class="op">%</span> chance per question <span class="kw">is</span>: {probability_scenario2}<span class="st">")</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="er"># Compare the probabilities</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> probability_scenario2 <span class="op">&gt;=</span> <span class="dv">2</span> <span class="op">*</span> probability_scenario1:</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">You are at least twice as likely to get at least 8 questions correct </span><span class="ch">\n</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="er">   in the second scenario.")</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>   <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">You are not twice as likely to get at least 8 questions correct in </span><span class="ch">\n</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="er">   the second scenario.")</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>The probability of getting at least 8 out of 15 questions correct with a 33.33% chance per question is: 0.08823159840676364
 
