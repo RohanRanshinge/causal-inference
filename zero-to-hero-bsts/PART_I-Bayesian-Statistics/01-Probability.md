@@ -35,7 +35,7 @@ The odds for event A is then given as
 
 $O(A) = \frac{P(A)}{P(A^c)} = \frac{P(A)}{1-P(A)}$ 
 
-$O(A) = \frac{1/6}{5/6}= \frac{1}{5} $
+$O(A) = \frac{1/6}{5/6}= \frac{1}{5}$
 
 This can also be written as 1:5 (or 5:1 odds against). \
 So if an event has a ⅙ probability of happening its odds are 1:5
