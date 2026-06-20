@@ -21,13 +21,13 @@ $Posterior Probability =\frac{Likelihood * Prior}{Normalized Probability}$
 * **P(B) or Normalized probability:** This acts as a normalizing constant, ensuring that the posterior probability distribution is properly scaled. It represents the overall probability of observing the evidence B.
 
 ## Priors
-An important part of the above equation is the prior. The prior is used to quantify our belief even before observing the data. They allow us to use background information to adjust the likelihood.  
-There are 2 types of priors:
-* **Non-informative priors:**
+An important part of the above equation is the prior. The prior is used to quantify our belief even before observing the data. They allow us to use background information to adjust the likelihood.\  
+There are 2 types of priors:\
+* **Non-informative priors:**\
     * When a prior adds little to no information its called a non-informative prior
     * When a non-informative prior is used, the analyst wants to the posterior distribution to be primarily shaped by the likelihood of the data
     * eg: assigning 1/2 priors to two events (heads or tails). assigning 1/6 priors to a value when rolling a fair six-sided die 
-* **Informative priors:**
+* **Informative priors:**\
     * An informative prior is one that adds information
     * When an informative prior is used, the analyst wants the posterior distribution to be shaped by both the likelihood and the prior.
 
@@ -55,13 +55,13 @@ The equation then becomes:
 
 $P(H_i|data) = \frac{P(data|H_i) * P(H_i)}{\sum_{j=1}^{n}P(data|H_j) * P(H_j)}$
 
-This might look a bit more complex, but the principle remains the same. Here's what each component represents:
+This might look a bit more complex, but the principle remains the same. Here's what each component represents:\
 * $P(H_i|data)$: This is the posterior probability. It represents the updated belief in hypothesis Hi after considering the observed data. It's what we want to calculate.
 * $P(data|H_i)$: This is the likelihood. It's the probability of observing the data given that hypothesis Hi is true. In other words, how well does this hypothesis explain the data?
 * $P(H_i)$: This is the prior probability. It represents our initial belief in hypothesis Hi before we saw any data. It's what we thought was true based on existing knowledge.  
 * Σ $P(data|H_j) * P(H_j)$: This is the evidence or marginal likelihood. It is the sum across all hypotheses of the product of the likelihood of the data given each hypothesis, and that hypothesis prior. It acts as a normalizing constant, ensuring that the posterior probabilities across all hypotheses sum up to 1.
 
-Calculating the denominator can pose significant challenges, especially when it requires considering evidence across multiple conditions. Addressing these challenges is tricky and sometimes impossible. To solve this, statisticians often use:
+Calculating the denominator can pose significant challenges, especially when it requires considering evidence across multiple conditions. Addressing these challenges is tricky and sometimes impossible. To solve this, statisticians often use:\
 * **Conjugate priors:** Using conjugate priors simplifies calculations and avoids direct computation of the denominator. Conjugate priors are mathematical conveniences that we will explore later on.
 * **Monte Carlo simulations:** When conjugate priors are not feasible, Monte Carlo simulations provide alternative methods to approximate the posterior distribution and circumvent calculating the complex denominator.
 
@@ -76,7 +76,7 @@ $P(H_i|data) = \frac{P(data|H_i) * P(H_i)}{\sum_{j=1}^{n}P(data|H_j) * P(H_j)}$
 
 In simpler terms, the posterior probability (what we're interested in) is proportional to the likelihood times the prior, all divided by the evidence.
 
-By applying this formula, we can calculate the posterior probability for each hypothesis in our set. This lets us quantify how much our belief in each hypothesis should change given the evidence. The hypothesis with the highest posterior probability is considered the most probable given the data.
+By applying this formula, we can calculate the posterior probability for each hypothesis in our set. This lets us quantify how much our belief in each hypothesis should change given the evidence. The hypothesis with the highest posterior probability is considered the most probable given the data.\
 With multiple hypotheses at play sometimes calculating the denominator can be hard and to solve this we often use conjugate priors or monte carlo simulations.
 
 However, we can compare the posterior probabilities of two or more hypotheses directly without needing to solve the denominator. For instance, comparing hypotheses H1 and H2, we can write:
