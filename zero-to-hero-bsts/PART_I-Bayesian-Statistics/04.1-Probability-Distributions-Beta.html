@@ -270,7 +270,7 @@ window.Quarto = {
   <li><a href="#beta-distribution" id="toc-beta-distribution" class="nav-link active" data-scroll-target="#beta-distribution"><span class="header-section-number">7.1</span> Beta Distribution</a>
   <ul class="collapse">
   <li><a href="#plotting-beta-distributions-for-various-alpha-and-beta-values" id="toc-plotting-beta-distributions-for-various-alpha-and-beta-values" class="nav-link" data-scroll-target="#plotting-beta-distributions-for-various-alpha-and-beta-values"><span class="header-section-number">7.1.1</span> Plotting Beta distributions for various alpha and beta values</a></li>
-  <li><a href="#is-this-a-fair-coin" id="toc-is-this-a-fair-coin" class="nav-link" data-scroll-target="#is-this-a-fair-coin"><span class="header-section-number">7.1.2</span> Is this a fair coin?</a></li>
+  <li><a href="#is-this-coin-fake" id="toc-is-this-coin-fake" class="nav-link" data-scroll-target="#is-this-coin-fake"><span class="header-section-number">7.1.2</span> Is this coin fake?</a></li>
   <li><a href="#betting-on-mbappe" id="toc-betting-on-mbappe" class="nav-link" data-scroll-target="#betting-on-mbappe"><span class="header-section-number">7.1.3</span> Betting on Mbappe</a></li>
   </ul></li>
   </ul>
@@ -300,13 +300,18 @@ window.Quarto = {
 
 <p><a href="https://colab.research.google.com/github/RohanRanshinge/causal-inference/blob/main/zero-to-hero-bsts/PART_I-Bayesian-Statistics/04.1-Probability-Distributions-Beta.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
 <p>Probability distributions describe the likelihood of different outcomes for a random event.</p>
-<p>Here are a few ways to think about it: * It’s a comprehensive description of the possible values a random variable can take and the probabilities associated with each of these values. * It can be viewed as a complete list of all potential outcomes, along with their respective probabilities. * Probability distributions offer a visual representation of all possible events and the probability of each occurring.</p>
+<p>Here are a few ways to think about it:</p>
+<ul>
+<li>It’s a comprehensive description of the possible values a random variable can take and the probabilities associated with each of these values.</li>
+<li>It can be viewed as a complete list of all potential outcomes, along with their respective probabilities.</li>
+<li>Probability distributions offer a visual representation of all possible events and the probability of each occurring.</li>
+</ul>
 <section id="beta-distribution" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="beta-distribution"><span class="header-section-number">7.1</span> Beta Distribution</h2>
 <p>Earlier we saw that binomial distribution is used to find the probability of successful outcomes, given a number of trials and the probability of the successful outcome.</p>
 <p>In Beta distribution, <strong>we want to find the probability of success given we have observed the number of successful outcomes for a given number of trials.</strong></p>
 <p>For example we would use beta distribution to find the probability of flipping heads when we have observed 50 tosses of a coin and 30 of those were heads.</p>
-<div id="cell-3" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:564}}" data-outputid="f5d7b8c8-79f6-4c4b-877c-3830e4704693">
+<div id="cell-3" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:564}}" data-outputid="8b1b5841-b628-470b-8e8c-9f08dedc98fe" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta</span>
@@ -348,16 +353,21 @@ window.Quarto = {
 <li>The x axis of a beta distribution ranges from 0 to 1</li>
 <li>The y axis is the probability density and can be thought of as the weight of each hypothesis.</li>
 </ul>
-<p>It’s given by: <span class="math display">\[Beta(p;α,β) = \frac{p^{α-1}(1-p)^{β-1}}{beta(α,β)} \]</span> * p = probability of an event. This is our different hypothesis for the possible probabilities * α = how many times we observe an event we care about * β = how many times we observe the event we care about didn’t happen</p>
+<p>It’s given by: <span class="math display">\[Beta(p;α,β) = \frac{p^{α-1}(1-p)^{β-1}}{beta(α,β)}\]</span></p>
+<ul>
+<li>p = probability of an event. This is our different hypothesis for the possible probabilities</li>
+<li>α = how many times we observe an event we care about</li>
+<li>β = how many times we observe the event we care about didn’t happen</li>
+</ul>
 <p>The mean of a beta distribution is given by<br>
-$ μ = $<br>
+<span class="math inline">\(μ =  \frac{α}{(α + β)}\)</span><br>
 <span class="math inline">\(σ = \frac{(α*β)}{(α+β)^2*(α+β+1)}\)</span></p>
 <p>If you have a sense of the average probability and the variance you can plug it into the equations above to get alpha and beta values.</p>
 <section id="plotting-beta-distributions-for-various-alpha-and-beta-values" class="level3" data-number="7.1.1">
 <h3 data-number="7.1.1" class="anchored" data-anchor-id="plotting-beta-distributions-for-various-alpha-and-beta-values"><span class="header-section-number">7.1.1</span> Plotting Beta distributions for various alpha and beta values</h3>
 <p>If you know the mean and variance of a beta distribution you can also use bigger or smaller values of alpha and beta to get different distributions based on your understanding of data (ie prior beliefs). If you are uncertain you can choose small values, if you have stronger beliefs you can choose larger values and still keep the mean and variance same.</p>
 <p>This flexibility allows you to incorporate your existing knowledge or lack thereof into the model.</p>
-<div id="cell-5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:1000}}" data-outputid="8baa7672-4f32-4668-970c-41171cae0668">
+<div id="cell-5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:984}}" data-outputid="78cb4f9c-b826-4aca-c742-601cf0881ee9" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta</span>
@@ -403,10 +413,10 @@ $ μ = $<br>
 <p>In real life situations, we almost never know the true probabilities for events.</p>
 <p><strong>That’s why the beta distribution is one of the most powerful tools for understanding data.</strong></p>
 </section>
-<section id="is-this-a-fair-coin" class="level3" data-number="7.1.2">
-<h3 data-number="7.1.2" class="anchored" data-anchor-id="is-this-a-fair-coin"><span class="header-section-number">7.1.2</span> Is this a fair coin?</h3>
+<section id="is-this-coin-fake" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="is-this-coin-fake"><span class="header-section-number">7.1.2</span> Is this coin fake?</h3>
 <p>Let’s say you are flipping a coin and notice that you get 12 heads and 18 tails and want to know the probability that the chance of getting heads is less than or equal to 0.5</p>
-<div id="cell-8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="1834047f-4914-470c-9cf7-7d15cf9011a9">
+<div id="cell-8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="df8a9907-370b-4b98-9a85-6f3512618265" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="dv">12</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>beta <span class="op">=</span> <span class="dv">18</span></span>
@@ -418,7 +428,7 @@ $ μ = $<br>
 </div>
 </div>
 <p>OR you can also write this as</p>
-<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="8bb5fd75-73f3-4941-ad2c-d25627e8a2a4">
+<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="d5bd093e-b689-4c36-ae29-97098168aac3" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> quad</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the function to integrate</span></span>
@@ -427,12 +437,12 @@ $ μ = $<br>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform the integration</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>result, error <span class="op">=</span> quad(integrand, <span class="dv">0</span>, <span class="fl">0.5</span>)</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>0.8675345517694951</code></pre>
 </div>
 </div>
 <p>If you had to find the probability that the chance of getting heads was greater than 0.5 you would change the above code blocks like so</p>
-<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="c8542425-5b4b-438e-d539-ea5570a69f29">
+<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="bc3ac485-ac83-488e-b058-d0ef96b8d7ec" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="dv">12</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>beta <span class="op">=</span> <span class="dv">18</span></span>
@@ -443,7 +453,7 @@ $ μ = $<br>
 <pre><code>0.132465448230505</code></pre>
 </div>
 </div>
-<div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="0b7235fd-f029-4637-8be9-94e8efdb0a22">
+<div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="178f48f5-b1a8-48f5-ffc5-f68bb4967ad8" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.integrate <span class="im">import</span> quad</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the function to integrate</span></span>
@@ -452,7 +462,7 @@ $ μ = $<br>
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform the integration</span></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>result, error <span class="op">=</span> quad(integrand, <span class="fl">0.5</span>, <span class="dv">1</span>)</span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>0.13246544823050507</code></pre>
 </div>
 </div>
@@ -463,7 +473,7 @@ $ μ = $<br>
 <p>He is willing to bet only if there is at least a 0.5 probability that Mbappe’s scoring chance is greater than 70%. Should he make the bet?</p>
 <p>You decide to pull up Mbappe’s stats and see that he has scored 332 goals in 462 games.<br>
 That makes α=332 and β=130</p>
-<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:564}}" data-outputid="649da181-5ed3-4fbe-97e5-515bad72b73d">
+<div id="cell-16" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:564}}" data-outputid="a1cc17e8-7360-40c8-ab0f-be35df67ba37" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta</span>
@@ -506,7 +516,7 @@ That makes α=332 and β=130</p>
 </div>
 </div>
 <p>Looking at the x axis you can see that all data is less than 0.8. We want to know how much exactly is above 0.7, the value our friend cares about for the bet (highlighted in blue above).</p>
-<div id="cell-18" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="5f615c64-6836-4383-ac0d-afbfe2f25af5">
+<div id="cell-18" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="70b39e16-80e4-466b-89c2-b46430043b31" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> beta</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameters for the beta distribution based on Mbappe's stats</span></span>
@@ -526,12 +536,15 @@ That makes α=332 and β=130</p>
 <span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if this probability is greater than 0.5</span></span>
 <span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>bet_condition <span class="op">=</span> <span class="fl">0.5</span></span>
 <span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> probability <span class="op">&gt;</span> bet_condition:</span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Since the probability (</span><span class="sc">{</span>probability<span class="sc">:.4f}</span><span class="ss">) is greater than </span><span class="sc">{</span>bet_condition<span class="sc">}</span><span class="ss">, you might consider making the bet."</span>)</span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Since the probability (</span><span class="sc">{</span>probability<span class="sc">:.4f}</span><span class="ss">) is not greater than </span><span class="sc">{</span>bet_condition<span class="sc">}</span><span class="ss">, he should consider making the bet."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"""Since the probability (</span><span class="sc">{</span>probability<span class="sc">:.4f}</span><span class="ss">) is greater than </span><span class="sc">{</span>bet_condition<span class="sc">}</span><span class="ss">,</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="ss">    you might consider making the bet."""</span>)</span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"""Since the probability (</span><span class="sc">{</span>probability<span class="sc">:.4f}</span><span class="ss">) is not greater than </span><span class="sc">{</span>bet_condition<span class="sc">}</span><span class="ss">,</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="ss">    he not should consider making the bet."""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>The probability that Mbappe's chance of scoring is greater than 70.0% is: 0.8140788834249968
-Since the probability (0.8141) is greater than 0.5, you might consider making the bet.</code></pre>
+Since the probability (0.8141) is greater than 0.5, 
+    you might consider making the bet.</code></pre>
 </div>
 </div>
 
