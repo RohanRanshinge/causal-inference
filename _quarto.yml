@@ -4,6 +4,8 @@ project:
 book:
   title: "Zero to Hero in Causal Inference"
   author: "Rohan Ranshinge"
+  resources:
+    - "zero-to-hero-bsts/PART_I-Bayesian-Statistics/images/"
   chapters:
     - index.qmd
     - part: "Bayesian Statistics"
