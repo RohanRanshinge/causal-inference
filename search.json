@@ -238,7 +238,7 @@
     "href": "zero-to-hero-bsts/PART_I-Bayesian-Statistics/02-Bayes-Theorem.html#the-hidden-constant-finding-the-denominator-in-bayes-theorem",
     "title": "4  Bayes’ theorem",
     "section": "4.3 The Hidden Constant: Finding the denominator in Bayes’ theorem",
-    "text": "4.3 The Hidden Constant: Finding the denominator in Bayes’ theorem\nHow do we calculate the denominator in Bayes theorem? For P(B) think from a venn diagram POV\n\n\n\nAlt text\n\n\nThe denominator P(B) in the theorem can be expressed as\n\\[P(B) = P(B \\cap A) + P(B \\cap \\bar{A})\\]\nSince the joint probability of B and A is given by\n\\[P(B \\cap A) = P(B|A) * P(A)\\]\nSimilarly,\n\\[P(B \\cap \\bar{A}) = P(B|\\bar{A}) * P(\\bar{A})\\]\nTherefore P(B) can be rewritten as, \\[P(B) = P(B|A) * P(A) + P(B|\\bar{A}) * P(\\bar{A})\\]\nOkay so what? Let’s see an example to understand why this is useful!",
+    "text": "4.3 The Hidden Constant: Finding the denominator in Bayes’ theorem\nHow do we calculate the denominator in Bayes theorem? For P(B) think from a venn diagram POV\n\n\n\nVenn Diagram\n\n\nThe denominator P(B) in the theorem can be expressed as\n\\[P(B) = P(B \\cap A) + P(B \\cap \\bar{A})\\]\nSince the joint probability of B and A is given by\n\\[P(B \\cap A) = P(B|A) * P(A)\\]\nSimilarly,\n\\[P(B \\cap \\bar{A}) = P(B|\\bar{A}) * P(\\bar{A})\\]\nTherefore P(B) can be rewritten as, \\[P(B) = P(B|A) * P(A) + P(B|\\bar{A}) * P(\\bar{A})\\]\nOkay so what? Let’s see an example to understand why this is useful!",
     "crumbs": [
       "Bayesian Statistics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Bayes’ theorem</span>"
