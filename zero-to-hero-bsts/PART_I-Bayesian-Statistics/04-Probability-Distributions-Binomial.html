@@ -376,11 +376,11 @@ For eg: <strong><em>what is the probability of getting 5 heads in 10 coin tosses
 <h3 data-number="6.3.2" class="anchored" data-anchor-id="plotting-the-binomial-distribution"><span class="header-section-number">6.3.2</span> Plotting the Binomial Distribution</h3>
 <p>How does the above equation look in code?</p>
 <p>The binom.pmf( ) function gives us the probability of seeing 5 heads in 10 coin tosses.</p>
-<div id="cell-4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="4b757dcf-5379-4c34-9b3b-f365c00143be" data-execution_count="13">
+<div id="cell-4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="4b757dcf-5379-4c34-9b3b-f365c00143be" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>binom.pmf(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
-<pre><code>np.float64(0.24609375000000003)</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>np.float64(0.24609375)</code></pre>
 </div>
 </div>
 </section>
@@ -408,7 +408,7 @@ What you are thinking of is the expected value or the average result over many t
 <p>Remember at the start of this chapter I had said, probability distributions offer a visual representation of all possible events and the probability of each occurring.</p>
 <p>So how would we visualize this?</p>
 <p>The above equation now allows us to calculate the probability for any k successes using a fixed n and p.</p>
-<div id="cell-7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:528}}" data-outputid="e1a21ec7-3485-4da8-ac33-7ceed5ea840f" data-execution_count="14">
+<div id="cell-7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:528}}" data-outputid="e1a21ec7-3485-4da8-ac33-7ceed5ea840f" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
@@ -458,14 +458,14 @@ What you are thinking of is the expected value or the average result over many t
 <p>The above chart shows all possible events and the probability of each occurring when flipping a coin 10 times.</p>
 <p>Okay let’s look at another example using a fair sided die.<br>
 <strong><em>Q2) What is the probability of getting four 5s when rolling a die 10 times</em></strong></p>
-<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="5fdd27e9-db0f-4dbc-eafc-ee1662bafca9" data-execution_count="15">
+<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="5fdd27e9-db0f-4dbc-eafc-ee1662bafca9" data-execution_count="13">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>binom.pmf(<span class="dv">4</span>,<span class="dv">10</span>,<span class="dv">1</span><span class="op">/</span><span class="dv">6</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>np.float64(0.054265875850988195)</code></pre>
 </div>
 </div>
-<div id="cell-11" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:528}}" data-outputid="ffe2c8cd-24c3-4a26-bfa7-5718781048bd" data-execution_count="16">
+<div id="cell-11" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:528}}" data-outputid="ffe2c8cd-24c3-4a26-bfa7-5718781048bd" data-execution_count="14">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
@@ -514,7 +514,7 @@ What you are thinking of is the expected value or the average result over many t
 </div>
 <p>If you are also asked the probability of getting <strong>at least</strong> four 5s when rolling a six sided die 10 times, you just have to add the bars of 4,5,6.</p>
 <p>What would that look like?</p>
-<div id="cell-14" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:528}}" data-outputid="b20c839a-2836-4f67-ca0e-08532300688f" data-execution_count="17">
+<div id="cell-14" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:528}}" data-outputid="b20c839a-2836-4f67-ca0e-08532300688f" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
@@ -564,15 +564,15 @@ What you are thinking of is the expected value or the average result over many t
 </div>
 </div>
 </div>
-<div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="6d73d4d7-d85a-4c56-d2cc-10e53c18b9a2" data-execution_count="18">
+<div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="6d73d4d7-d85a-4c56-d2cc-10e53c18b9a2" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">10</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="dv">6</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the probability using the survival function (1 - cdf)</span></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> <span class="dv">1</span> <span class="op">-</span> binom.cdf(<span class="dv">3</span>, n, p)</span>
 <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="18">
-<pre><code>np.float64(0.0697278425544886)</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>np.float64(0.06972784255448872)</code></pre>
 </div>
 </div>
 <p>Translation: There’s a 7% chance that you will see that specific number show up 4 or more times in 10 throws.</p>
@@ -583,7 +583,7 @@ What you are thinking of is the expected value or the average result over many t
 <p>Let’s look at few other examples that might be helpful</p>
 <p><strong>Example 1: e-commerce business</strong><br>
 An e-commerce website has a 2% conversion rate. If they have 500 visitors in a day, what is the probability that exactly 10 visitors make a purchase?</p>
-<div id="cell-19" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="33e912c3-5017-447b-fa8d-00b328080b38" data-execution_count="19">
+<div id="cell-19" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="33e912c3-5017-447b-fa8d-00b328080b38" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">500</span>  <span class="co"># Total number of visitors (trials)</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fl">0.02</span>  <span class="co"># Probability of a single visitor making a purchase (conversion rate)</span></span>
@@ -593,13 +593,13 @@ An e-commerce website has a 2% conversion rate. If they have 500 visitors in a d
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"""Example 1 (E-commerce): The probability of exactly </span><span class="sc">{</span>k<span class="sc">}</span><span class="ss"> purchases out of</span></span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> visitors with a conversion rate of </span><span class="sc">{</span>p<span class="op">*</span><span class="dv">100</span><span class="sc">}</span><span class="ss">% is: </span><span class="sc">{</span>result_ecommerce<span class="sc">}</span><span class="ss">"""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Example 1 (E-commerce): The probability of exactly 10 purchases out of 
+<pre><code>Example 1 (E-commerce): The probability of exactly 10 purchases out of
 500 visitors with a conversion rate of 2.0% is: 0.12637979106893046</code></pre>
 </div>
 </div>
 <p><strong>Example 2: Stock market</strong><br>
 You pick 20 stocks, and there is a 5% chance that any single stock will be a “10x bagger”. What is the probability of picking exactly 3 “10x baggers” out of the 20 stocks?</p>
-<div id="cell-21" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="d32854a1-4b79-4ea6-ae41-87187d0dcdee" data-execution_count="20">
+<div id="cell-21" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="d32854a1-4b79-4ea6-ae41-87187d0dcdee" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">20</span>  <span class="co"># Number of stocks picked (trials)</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fl">0.05</span>  <span class="co"># Probability of a single stock being a "10x bagger" (probability of success)</span></span>
@@ -609,13 +609,13 @@ You pick 20 stocks, and there is a 5% chance that any single stock will be a “
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"""Example 2 (Stock Market): The probability of picking exactly </span><span class="sc">{</span>k<span class="sc">}</span><span class="ss"> '10x</span></span>
 <span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="ss">baggers' out of </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss"> stocks with a </span><span class="sc">{</span>p<span class="op">*</span><span class="dv">100</span><span class="sc">}</span><span class="ss">% chance for each is: </span><span class="sc">{</span>result_stocks<span class="sc">}</span><span class="ss">"""</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Example 2 (Stock Market): The probability of picking exactly 3 '10x 
-baggers' out of 20 stocks with a 5.0% chance for each is: 0.05958214776873281</code></pre>
+<pre><code>Example 2 (Stock Market): The probability of picking exactly 3 '10x
+baggers' out of 20 stocks with a 5.0% chance for each is: 0.059582147768732795</code></pre>
 </div>
 </div>
 <p><strong>Example 3: Exam</strong><br>
 You are taking a multiple-choice test with 15 questions, and each question has 4 possible answers. You didn’t study and decided to guess randomly on every question. What is the probability that you get at least 8 questions correct?</p>
-<div id="cell-23" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="dacf976e-d616-41fc-cf0d-cab4e5e05860" data-execution_count="21">
+<div id="cell-23" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="dacf976e-d616-41fc-cf0d-cab4e5e05860" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameters for the binomial distribution</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="dv">15</span>  <span class="co"># Number of trials (questions)</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">1</span><span class="op">/</span><span class="dv">4</span>  <span class="co"># Probability of success (guessing correctly)</span></span>
@@ -630,7 +630,7 @@ You are taking a multiple-choice test with 15 questions, and each question has 4
 </div>
 </div>
 <p>Q3.1) Suppose you quickly read through some of the material before the test, and your probability of answering each question correctly increases to 1/3. Does this increase make you twice as likely to get at least 8 questions correct compared to guessing randomly on all 15 questions?</p>
-<div id="cell-25" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="ba893bc2-d05d-424b-f0a0-6fb3c7361353" data-execution_count="22">
+<div id="cell-25" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="ba893bc2-d05d-424b-f0a0-6fb3c7361353" data-execution_count="12">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Parameters for the second scenario (improved guessing probability)</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>n_scenario2 <span class="op">=</span> <span class="dv">15</span>  <span class="co"># Number of questions (trials) remains the same</span></span>
