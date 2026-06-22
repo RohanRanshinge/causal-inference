@@ -1,4 +1,5 @@
 # Bayesian Inference: Priors, Likelihoods and Posteriors
+
 Today’s chapter is a fun one and lays the groundwork for all future chapters. We’re covering Bayesian inference!
 
 At its core, Bayesian inference revolves around understanding and quantifying uncertainty. 
@@ -15,23 +16,27 @@ Let's rewrite it in different terms:
 $Posterior Probability =\frac{Likelihood * Prior}{Normalized Probability}$ 
 
 ## Deconstructing the Equation
+
 * **P(A|B) or Posterior probability:** This represents our updated belief about event A after considering the evidence B. It's the probability we are interested in finding.
 * **P(B|A) or Likelihood:** This is the probability of observing the evidence B given that our hypothesis A is true. It measures how well the data supports our hypothesis.
 * **P(A) or Prior probability:** This reflects our initial belief about the probability of event A before observing any evidence. This is our existing knowledge or assumptions.
 * **P(B) or Normalized probability:** This acts as a normalizing constant, ensuring that the posterior probability distribution is properly scaled. It represents the overall probability of observing the evidence B.
 
 ## Priors
+
 An important part of the above equation is the prior. The prior is used to quantify our belief even before observing the data. They allow us to use background information to adjust the likelihood.\  
-There are 2 types of priors:\
-* **Non-informative priors:**\
+There are 2 types of priors:
+
+* **Non-informative priors:**
     * When a prior adds little to no information its called a non-informative prior
     * When a non-informative prior is used, the analyst wants to the posterior distribution to be primarily shaped by the likelihood of the data
     * eg: assigning 1/2 priors to two events (heads or tails). assigning 1/6 priors to a value when rolling a fair six-sided die 
-* **Informative priors:**\
+* **Informative priors:**
     * An informative prior is one that adds information
     * When an informative prior is used, the analyst wants the posterior distribution to be shaped by both the likelihood and the prior.
 
 ## The Importance of Normalization ie. the denominator
+
 The denominator, plays an important role in normalizing the data. The denominator ensures that the posterior probabilities sum to one. 
 
 Recall the previous cancer example we went through. There, we had two hypotheses based on the question (cancer or no cancer) and we wanted to find the probability of one of the hypotheses given a positive result.  
@@ -46,9 +51,11 @@ $P(BC|+) = \frac{P(+|BC) * P(BC)}{P(+ \cap BC) + P(+ \cap \bar{BC})}$
 $P(BC|+) = \frac{P(+|BC) * P(BC)}{P(+|BC) * P(BC) + P(+|\bar{BC}) * P(\bar{BC})}$
 
 ### So what’s going on in the denominator?
+
 In the denominator, we are looking at both hypotheses $P(+ \cap BC)$ and  $P(+ \cap \bar{BC})$ and summing them. ie, we are finding the $likelihood*prior$ for both hypotheses and summing them in the denominator.
 
 ### What happens with multiple hypotheses?
+
 The example earlier was easy because we were just interested in two hypotheses (cancer and no cancer) but, there could be situations where there are multiple hypotheses at play.   
 In that case, we have to sum over **ALL** hypotheses in the denominator.   
 The equation then becomes:  
@@ -66,6 +73,7 @@ Calculating the denominator can pose significant challenges, especially when it 
 * **Monte Carlo simulations:** When conjugate priors are not feasible, Monte Carlo simulations provide alternative methods to approximate the posterior distribution and circumvent calculating the complex denominator.
 
 ## Bayesian Inference
+
 Bayesian inference revolves around the foundational Bayes' Theorem. At the end of the previous chapter, we encountered the simplified version for two outcomes:
 
 $P(BC|+) = \frac{P(+|BC) * P(BC)}{P(+|BC) * P(BC) + P(+|\bar{BC}) * P(\bar{BC})}$
@@ -92,6 +100,7 @@ Bayesian inference provides a powerful framework for reasoning under uncertainty
 That's all for this chapter folks! Next we cover Probability Distributions!
 
 ## Skill Tree Extensions: Recommended Readings
+
 1. Bayesian Statistics for Beginners [book](https://a.co/d/0mdF1pj) (Donovan and Mickey)
 2. Bayesian Statistics the Fun Way [book](https://a.co/d/dLdYfSo) (Will Kurt)
 3. Yudkowsky’s Bayes [article](https://www.yudkowsky.net/rational/bayes)

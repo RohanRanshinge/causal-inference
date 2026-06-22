@@ -1,4 +1,5 @@
 # Conjugate Priors
+
 Earlier we covered a few distributions. In this section we will see how we can actually apply them to solve problems!  
 Remember the Bayes theorem we had seen earlier?  
 
@@ -8,12 +9,14 @@ Therefore,
 $Posterior Probability  ∝   Likelihood * Prior$ 
 
 ## What is a Conjugate Prior?
+
 A conjugate prior is a special prior distribution that when multiplied with the likelihood function, results in a posterior distribution that belongs to the same family as the prior.
 * This allows us to easily incorporate new data, as the new posterior can serve as the prior for the next update.
 
 This special prior is a conjugate only for the specified likelihood function.
 
 ## Why do we need conjugate priors?
+
 * Conjugate priors are a shortcut that allow us to directly find the posterior distributions without needing to integrate the denominator in the Bayes Theorem. 
 * The denominator normalizes the data. It accounts for the prior * likelihood for all possible hypotheses and then sums them. 
 * This integration is very hard and sometimes impossible. 

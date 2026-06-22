@@ -76,6 +76,7 @@ P(F|PhD) $= \frac{3/10}{1/2} = \frac{6}{10}$  ... conditional probability
 This matches the answer we had seen earlier. This was just a different way to get to it.
 
 ## Deriving the Bayes Theorem
+
 Okay, now that we have seen that example let’s look at some equations and derive the Bayes theorem
 
 In mathematical form, the conditional probability is given as:
@@ -106,6 +107,7 @@ I.e. if we know P(B|A) we can find P(A|B)
 The numerator of the Bayes’ rule is the joint probability P(A ∩ B), and the denominator is the marginal probability P(B)
 
 ## The Hidden Constant: Finding the denominator in Bayes' theorem
+
 How do we calculate the denominator in Bayes theorem?
 For P(B) think from a venn diagram POV
 
@@ -185,6 +187,7 @@ $P(BC|+) = \frac{(0.008 /0.01) * 0.01}{0.10304} = 7.7\%$
 We were given the probability of a positive result given a cancer condition and using Bayes theorem we were able to find the probability of cancer given we had a positive result.
 
 ## Mission Complete: Summary
+
 In this chapter we saw the almighty Bayes theorem and derived it too.   
 Remember, whenever you are given the probability of one direction and are asked the probability of the other direction you can use the Bayes theorem.  
 

@@ -1,4 +1,5 @@
 # Probability
+
 We can’t do Bayesian Statistics without learning about probability first! Personally, I never found probability fun. I always struggled with those questions of finding the probability of landing 5 heads consecutively or the probability of picking one ace and two queens from three decks of cards etc. I know some of you may be thinking “oh, that’s so obvious, what’s so hard about probability”. If you are already familiar with probability and are comfortable with it feel free to skip this section, but for those of us that find it challenging, this might be worth a read. (I haven’t gone into great detail here though as the intention is to just introduce the concept).
 
 ## Super Basics
@@ -64,6 +65,7 @@ $P(winning) = \frac{X}{X+Y} = \frac{1}{5000+1}$
 $P(winning) = \frac{1}{5001}$
 
 ## Expected value
+
 In simple terms, the expected value is the **average** of the variable.
 
 In slightly more technical terms, the expected value of a random variable X is the weighted average of values X, where the weights are the probabilities of those values.
@@ -76,10 +78,11 @@ $E(X) = \frac{1}{6}*(1+2+3+4+5+6) = 3.5$ \
 Since each side is equally likely we sum up all the values and divide them by 6.
 
 ## Frameworks for Defining Probabilities
+
 There are two main frameworks we need to be aware of for defining probabilities\
 1. Frequentist framework\
     a. It's all about probability in the long run.  You have a hypothetical infinite sequence and then look at the frequency of outcomes in that hypothetical infinite sequence (if a die is rolled infinitely, probability of rolling a 2 is 1 in 6)\
-3. Bayesian framework\
+2. Bayesian framework\
     a. Based on personal perspective. Takes into account what you know about a particular problem\
 
 We will be using the Bayesian framework in our journey.
