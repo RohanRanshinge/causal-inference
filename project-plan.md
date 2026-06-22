@@ -69,8 +69,8 @@ The Kalman Filter operates entirely in matrix algebra over multivariate Gaussian
 - **Normal-Inverse-Gamma conjugacy:** Jointly updating a mean $\mu$ and variance $\sigma^2$ — the direct ancestor of the variance-sampling step in the BSTS Gibbs sampler.
 - Mathematical derivation of posterior hyperparameter update equations for both.
 
-**💻 Coding Exercise 1** *(after completing this chapter):*
-Implement Normal-Normal Bayesian updating from scratch in Python/R. Start with a prior $\mu_0, \sigma_0^2$, generate synthetic data, and plot how the posterior mean and variance evolve as you add observations one at a time. Verify analytically.
+> **💻 Coding Exercise 1** *(after completing this chapter):*\
+> Implement Normal-Normal Bayesian updating from scratch in Python/R. Start with a prior $\mu_0, \sigma_0^2$, generate synthetic data, and plot how the posterior mean and variance evolve as you add observations one at a time. Verify analytically.
 
 ---
 
@@ -95,8 +95,9 @@ Implement Normal-Normal Bayesian updating from scratch in Python/R. Start with a
     - MCMC for Bayesian regression when conjugacy does not apply.
     - Posterior predictive distribution: not just a point estimate, but a distribution over future $y$ values.
 
-**💻 Coding Exercise 2** *(after completing this chapter):*
-Implement Bayesian linear regression from scratch using Gibbs sampling. Compare posterior coefficient distributions to OLS estimates on a synthetic dataset. Verify the posterior predictive interval against held-out data.
+> **💻 Coding Exercise 2** *(after completing this chapter):*\
+> Implement Bayesian linear regression from scratch using Gibbs sampling. Compare posterior coefficient distributions to OLS estimates on a synthetic dataset. Verify the posterior predictive interval against held-out data.
+
 ---
 
 ## Phase 3: State Space Models & The Kalman Filter
@@ -144,8 +145,8 @@ Before implementing the full BSTS, implement the simplest possible SSM. This is 
 - Running the algorithm backward from time $T$ to time $1$ to estimate historical states using the full dataset.
 - Why smoothed state estimates are more accurate than filtered ones for historical analysis.
 
-**💻 Coding Exercise 3** *(after completing this chapter):*
-Implement a univariate Kalman Filter and RTS Smoother from scratch on a synthetic random walk plus noise series. Verify your filtered and smoothed state estimates against `statsmodels.tsa.statespace`. Then simulate a "post-intervention period" by withholding the last 20 observations and plotting the counterfactual forecast with uncertainty bands.
+> **💻 Coding Exercise 3** *(after completing this chapter):*\
+> Implement a univariate Kalman Filter and RTS Smoother from scratch on a synthetic random walk plus noise series. Verify your filtered and smoothed state estimates against `statsmodels.tsa.statespace`. Then simulate a "post-intervention period" by withholding the last 20 observations and plotting the counterfactual forecast with uncertainty bands.
 
 ---
 
@@ -204,8 +205,9 @@ Each iteration of the sampler cycles through:
 - After fitting, simulate data from the posterior predictive distribution and compare to observed pre-period data.
 - Using $\hat{R}$, trace plots, and effective sample size to verify the sampler has converged before drawing conclusions.
 
-**💻 Coding Exercise 4** *(after completing this chapter):*
-Implement FFBS on the Local Level Model from Chapter 7. Draw 1,000 state path samples and visualize the posterior distribution over $\alpha_t$ at several time points. Compare the mean of your samples to the RTS Smoother estimate from Exercise 3.
+> **💻 Coding Exercise 4** *(after completing this chapter):*\
+> Implement FFBS on the Local Level Model from Chapter 7. Draw 1,000 state path samples and visualize the posterior distribution over $\alpha_t$ at several time points. Compare the mean of your samples to the RTS Smoother estimate from Exercise 3.
+
 ---
 
 ## Phase 5: Causal Inference & The Capstone
