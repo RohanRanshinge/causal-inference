@@ -319,11 +319,19 @@ This is the equation from earlier:</p>
 In that case, we have to sum over <strong>ALL</strong> hypotheses in the denominator.<br>
 The equation then becomes:</p>
 <p><span class="math inline">\(P(H_i|data) = \frac{P(data|H_i) * P(H_i)}{\sum_{j=1}^{n}P(data|H_j) * P(H_j)}\)</span></p>
-<p>This might look a bit more complex, but the principle remains the same. Here’s what each component represents:<br>
-* <span class="math inline">\(P(H_i|data)\)</span>: This is the posterior probability. It represents the updated belief in hypothesis Hi after considering the observed data. It’s what we want to calculate. * <span class="math inline">\(P(data|H_i)\)</span>: This is the likelihood. It’s the probability of observing the data given that hypothesis Hi is true. In other words, how well does this hypothesis explain the data? * <span class="math inline">\(P(H_i)\)</span>: This is the prior probability. It represents our initial belief in hypothesis Hi before we saw any data. It’s what we thought was true based on existing knowledge.<br>
-* Σ <span class="math inline">\(P(data|H_j) * P(H_j)\)</span>: This is the evidence or marginal likelihood. It is the sum across all hypotheses of the product of the likelihood of the data given each hypothesis, and that hypothesis prior. It acts as a normalizing constant, ensuring that the posterior probabilities across all hypotheses sum up to 1.</p>
-<p>Calculating the denominator can pose significant challenges, especially when it requires considering evidence across multiple conditions. Addressing these challenges is tricky and sometimes impossible. To solve this, statisticians often use:<br>
-* <strong>Conjugate priors:</strong> Using conjugate priors simplifies calculations and avoids direct computation of the denominator. Conjugate priors are mathematical conveniences that we will explore later on. * <strong>Monte Carlo simulations:</strong> When conjugate priors are not feasible, Monte Carlo simulations provide alternative methods to approximate the posterior distribution and circumvent calculating the complex denominator.</p>
+<p>This might look a bit more complex, but the principle remains the same. Here’s what each component represents:</p>
+<ul>
+<li><span class="math inline">\(P(H_i|data)\)</span>: This is the posterior probability. It represents the updated belief in hypothesis Hi after considering the observed data. It’s what we want to calculate.</li>
+<li><span class="math inline">\(P(data|H_i)\)</span>: This is the likelihood. It’s the probability of observing the data given that hypothesis Hi is true. In other words, how well does this hypothesis explain the data?</li>
+<li><span class="math inline">\(P(H_i)\)</span>: This is the prior probability. It represents our initial belief in hypothesis Hi before we saw any data. It’s what we thought was true based on existing knowledge.<br>
+</li>
+<li>Σ <span class="math inline">\(P(data|H_j) * P(H_j)\)</span>: This is the evidence or marginal likelihood. It is the sum across all hypotheses of the product of the likelihood of the data given each hypothesis, and that hypothesis prior. It acts as a normalizing constant, ensuring that the posterior probabilities across all hypotheses sum up to 1.</li>
+</ul>
+<p>Calculating the denominator can pose significant challenges, especially when it requires considering evidence across multiple conditions. Addressing these challenges is tricky and sometimes impossible. To solve this, statisticians often use:</p>
+<ul>
+<li><strong>Conjugate priors:</strong> Using conjugate priors simplifies calculations and avoids direct computation of the denominator. Conjugate priors are mathematical conveniences that we will explore later on.</li>
+<li><strong>Monte Carlo simulations:</strong> When conjugate priors are not feasible, Monte Carlo simulations provide alternative methods to approximate the posterior distribution and circumvent calculating the complex denominator.</li>
+</ul>
 </section>
 </section>
 <section id="bayesian-inference" class="level2" data-number="5.4">
