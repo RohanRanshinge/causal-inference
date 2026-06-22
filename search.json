@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Zero to Hero in Causal Inference",
     "section": "",
-    "text": "1 Zero to Hero in Causal Inference\nIn my previous role, I was once asked to find the lift associated with a promotional event. The promotion had already run on multiple products nationwide and I was asked to find the effectiveness of it retrospectively.\nAs I researched the best way to solve this, I came across the package CausalImpact() and the world of Causal Inference, Bayesian Statistics and Bayesian Structural Time Series models. As these fields were a bit foreign to me, I did what any sane person would do - just run the package and move on.",
+    "text": "1 Zero to Hero in Causal Inference\nIn my previous role, I was once asked to find the lift associated with a promotional event. The promotion had already run on multiple products nationwide and I was asked to find the effectiveness o f it retrospectively.\nAs I researched the best way to solve this, I came across the package CausalImpact() and the world of Causal Inference, Bayesian Statistics and Bayesian Structural Time Series models. As these fields were a bit foreign to me, I did what any sane person would do - just run the package and move on.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Zero to Hero in Causal Inference</span>"
     ]
@@ -44,7 +44,7 @@
     "href": "index.html#why-am-i-writing-about-this-why-should-you-care-about-reading",
     "title": "Zero to Hero in Causal Inference",
     "section": "1.4 Why am I writing about this? Why should you care about reading?",
-    "text": "1.4 Why am I writing about this? Why should you care about reading?\nI’m no expert in this field and am learning new concepts as I type this. Writing forces me to 1. identify gaps in my own understanding (see Feynman technique) 2. see my own progress over the weeks and months and 3. be of use to someone else on the internet (hopefully) who is also interested in Causal Impact but does not know where to start. If I can save even one person’s time then it would be fantastic. If not, I get a fun reference to read later on which is still great. Win-win!",
+    "text": "1.4 Why am I writing about this? Why should you care about reading?\nI’m no expert in this field and am learning new concepts as I type this.\nWriting forces me to:\n\nIdentify gaps in my own understanding (see Feynman technique)\nSee my own progress over the weeks and months and\nBe of use to someone else on the internet (hopefully) who is also interested in Causal Impact but does not know where to start.\n\nIf I can save even one person’s time then it would be fantastic. If not, I get a fun reference to read later on which is still great. Win-win!",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Zero to Hero in Causal Inference</span>"
     ]
@@ -64,7 +64,7 @@
     "href": "index.html#next-steps",
     "title": "Zero to Hero in Causal Inference",
     "section": "1.6 Next Steps",
-    "text": "1.6 Next Steps\nTo fully understand CausalImpact() there are three big topics we need to cover: 1. Bayesian Statistics 2. Time Series Analysis + State Space Models 3. Causal Inference\nIn the next post, I’ll dive into the basics of Bayesian Statistics which is foundational and will explain some of the core concepts mentioned earlier!\nAlright then, enough with the pitch, let’s jump straight into Bayesian Statistics next!",
+    "text": "1.6 Next Steps\nTo fully understand CausalImpact() there are three big topics we need to cover:\n\nBayesian Statistics\nTime Series Analysis + State Space Models\nCausal Inference\n\nIn the next post, I’ll dive into the basics of Bayesian Statistics which is foundational and will explain some of the core concepts mentioned earlier!\nAlright then, enough with the pitch, let’s jump straight into Bayesian Statistics next!",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Zero to Hero in Causal Inference</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "index.html#recommended-readings",
     "title": "Zero to Hero in Causal Inference",
     "section": "1.7 Recommended Readings",
-    "text": "1.7 Recommended Readings\nCausal Impact 1. YouTube demo 2. Github repo 3. Technical paper\nBayesian Statistics\nA lot of my learnings in Bayesian Stats comes from three books which are absolutely legendary. If you don’t know where to start, just grab a copy of the first two books below and you will automatically find yourself buying the third one! 1. Bayesian Statistics the Fun Way book (Will Kurt) 2. Bayesian Statistics for Beginners book (Donovan and Mickey) 3. Doing Bayesian Data Analysis book (John Kruschke)\nPS: This book is a living document of my journey to understand the math and mechanics behind these models.",
+    "text": "1.7 Recommended Readings\n\n1.7.1 Causal Impact\n\nYouTube demo\nGithub repo\nTechnical paper\n\n\n\n1.7.2 Bayesian Statistics\nA lot of my learnings in Bayesian Stats comes from three books which are absolutely legendary. If you don’t know where to start, just grab a copy of the first two books below and you will automatically find yourself buying the third one!\n\nBayesian Statistics the Fun Way book (Will Kurt)\nBayesian Statistics for Beginners book (Donovan and Mickey)\nDoing Bayesian Data Analysis book (John Kruschke)\n\nPS: This book is a living document of my journey to understand the math and mechanics behind these models.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Zero to Hero in Causal Inference</span>"
     ]
