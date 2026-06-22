@@ -62,13 +62,15 @@ The equation then becomes:
 
 $P(H_i|data) = \frac{P(data|H_i) * P(H_i)}{\sum_{j=1}^{n}P(data|H_j) * P(H_j)}$
 
-This might look a bit more complex, but the principle remains the same. Here's what each component represents:\
+This might look a bit more complex, but the principle remains the same. Here's what each component represents:
+
 * $P(H_i|data)$: This is the posterior probability. It represents the updated belief in hypothesis Hi after considering the observed data. It's what we want to calculate.
 * $P(data|H_i)$: This is the likelihood. It's the probability of observing the data given that hypothesis Hi is true. In other words, how well does this hypothesis explain the data?
 * $P(H_i)$: This is the prior probability. It represents our initial belief in hypothesis Hi before we saw any data. It's what we thought was true based on existing knowledge.  
 * Σ $P(data|H_j) * P(H_j)$: This is the evidence or marginal likelihood. It is the sum across all hypotheses of the product of the likelihood of the data given each hypothesis, and that hypothesis prior. It acts as a normalizing constant, ensuring that the posterior probabilities across all hypotheses sum up to 1.
 
-Calculating the denominator can pose significant challenges, especially when it requires considering evidence across multiple conditions. Addressing these challenges is tricky and sometimes impossible. To solve this, statisticians often use:\
+Calculating the denominator can pose significant challenges, especially when it requires considering evidence across multiple conditions. Addressing these challenges is tricky and sometimes impossible. To solve this, statisticians often use:
+
 * **Conjugate priors:** Using conjugate priors simplifies calculations and avoids direct computation of the denominator. Conjugate priors are mathematical conveniences that we will explore later on.
 * **Monte Carlo simulations:** When conjugate priors are not feasible, Monte Carlo simulations provide alternative methods to approximate the posterior distribution and circumvent calculating the complex denominator.
 
