@@ -290,6 +290,8 @@ CustomCausalImpact/
   3. Cumulative Impact over time
 - Output a summary table: estimated effect, 95% CI, tail-area probability.
 
+---
+
 ## Phase Summary & Milestone Checklist
 
 | Phase | Key Milestone |
@@ -309,3 +311,28 @@ CustomCausalImpact/
 | 3 | Ch. 8 — Kalman Filter | Kalman Filter + RTS Smoother on synthetic data; counterfactual forecast via withheld post-period |
 | 4 | Ch. 11 — BSTS Gibbs Sampler | FFBS on Local Level Model; 1,000 state path draws; compare mean to RTS estimate |
 | 5 | Ch. 13 — Capstone | Full package; validate against `CausalImpact` on real dataset |
+
+## Resources
+
+### Causal Impact
+1. [Causal Impact Paper - Brodersen et al. (2015)](https://projecteuclid.org/journals/annals-of-applied-statistics/volume-9/issue-1/Inferring-causal-impact-using-Bayesian-structural-time-series-models/10.1214/14-AOAS788.full) — the primary technical paper.
+2. [Causal Impact YouTube demo](https://www.youtube.com/watch?v=GTgZfCltMm8) 
+3. [CausalImpact R package GitHub](https://github.com/google/CausalImpact) — reference implementation.
+
+### Bayesian Statistics
+1. Bayesian Statistics the Fun Way [book](https://www.amazon.com/dp/B07J461Q2K?ref=cm_sw_r_ffobk_cp_ud_dp_JXKX7NGTARGC7W81DJWR&ref_=cm_sw_r_ffobk_cp_ud_dp_JXKX7NGTARGC7W81DJWR&social_share=cm_sw_r_ffobk_cp_ud_dp_JXKX7NGTARGC7W81DJWR&bestFormat=true&previewDoh=1) (Will Kurt)
+2. Bayesian Statistics for Beginners [book](https://www.amazon.com/dp/B083FYDBGZ?ref=cm_sw_r_ffobk_cp_ud_dp_DBCM0M833P7T2KASXRRT&ref_=cm_sw_r_ffobk_cp_ud_dp_DBCM0M833P7T2KASXRRT&social_share=cm_sw_r_ffobk_cp_ud_dp_DBCM0M833P7T2KASXRRT&bestFormat=true&previewDoh=1) (Donovan and Mickey)
+3. Doing Bayesian Data Analysis [book](https://a.co/d/7l2mfs1) (John Kruschke)
+4. Think Bayes - Allen Downey [online book](allendowney.github.io/ThinkBayes2)
+
+### State Space Models and Kalman Filter
+1. Kalman and Bayesian Filters in Python - Roger Labbe [online book](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)
+2. Forecasting: Principles and Practice [online book](https://otexts.com/fpp3/)
+
+### BSTS and MCMC Computation
+1. Bayesian Methods for Hackers - Cam Davidson-Pilon [online book](https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers)
+2. [Scott & Varian (2014)](https://people.ischool.berkeley.edu/~hal/Papers/2013/pred-present-with-bsts.pdf) - reference for BSTS pkg
+
+### Causal Inference
+1. Causal Inference for the Brave and True — Matheus Facure Alves [online book](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)
+2. Causal Inference: The Mixtape — Scott Cunningham [online book](https://mixtape.scunning.com/)
