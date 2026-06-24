@@ -30,7 +30,7 @@ There are 2 types of priors:
 * **Non-informative priors:**
     * When a prior adds little to no information its called a non-informative prior
     * When a non-informative prior is used, the analyst wants the posterior distribution to be primarily shaped by the likelihood of the data
-    * eg: assigning 1/2 priors to two events (heads or tails). assigning 1/6 priors to a value when rolling a fair six-sided die 
+    * egs: assigning 1/2 priors to two events (heads or tails), assigning 1/6 priors to a value when rolling a fair six-sided die 
 * **Informative priors:**
     * An informative prior is one that adds information
     * When an informative prior is used, the analyst wants the posterior distribution to be shaped by both the likelihood and the prior.
