@@ -68,7 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Conjugate-Priors-Conclusion.html" rel="next">
+<link href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.html" rel="next">
 <link href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.1-Beta-Binomial-Conjugate.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -251,8 +251,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Conjugate-Priors-Conclusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></span></a>
+  <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Normal - Inverse Gamma Conjugate</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Conjugate-Priors-Conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></span></a>
   </div>
 </li>
       </ul>
@@ -313,6 +319,8 @@ window.Quarto = {
 <p>The poisson distribution is given by the equation</p>
 <p><span class="math display">\[P(X;λ) = \frac{λ^xe^{-λ}}{x!}\]</span></p>
 <div id="cell-3" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:564}}" data-outputid="0a89510f-679f-4112-c2ff-21f7ceef46be">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> poisson</span>
@@ -337,6 +345,7 @@ window.Quarto = {
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the plot</span></span>
 <span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -349,9 +358,13 @@ window.Quarto = {
 <h3 data-number="11.1.1" class="anchored" data-anchor-id="finding-the-average-rate-of-plane-crashes"><span class="header-section-number">11.1.1</span> Finding the average rate of plane crashes</h3>
 <p>The Poisson distribution is very interesting because it tells us that even rare events can occur with a surprisingly high frequency. For example, if the average rate of plane accidents were 3, it is not impossible to see 5, 6, or 7 accidents happen in any given year. While rare, it is not impossible as shown by the probability on the y-axis above.</p>
 <p>Let’s see this with an example!<br>
-If average rate = 3, what is the probability of observing 5 crashes in a year? &gt; <span class="math display">\[P(X;λ) = \frac{λ^xe^{-λ}}{x!}\]</span><br>
-<span class="math display">\[P(5;3) = \frac{3^5e^{-3}}{5!} = 0.1\]</span> Therefore, there’s a 10% chance of seeing 5 plane crashes in a year when the average rate = 3</p>
+If average rate = 3, what is the probability of observing 5 crashes in a year?</p>
+<p><span class="math display">\[P(X;λ) = \frac{λ^xe^{-λ}}{x!}\]</span></p>
+<p><span class="math display">\[P(5;3) = \frac{3^5e^{-3}}{5!} = 0.1\]</span></p>
+<p>Therefore, there’s a 10% chance of seeing 5 plane crashes in a year when the average rate = 3</p>
 <div id="cell-5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="d7a89086-2174-40cb-8cdb-093a8d5cb3c8">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> poisson</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define lambda and x</span></span>
@@ -362,6 +375,7 @@ If average rate = 3, what is the probability of observing 5 crashes in a year? &
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>probability <span class="op">=</span> poisson.pmf(x, lam)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The probability of X=</span><span class="sc">{</span>x<span class="sc">}</span><span class="ss"> for a Poisson distribution with lambda=</span><span class="sc">{</span>lam<span class="sc">}</span><span class="ss"> is: </span><span class="sc">{</span>probability<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-stdout">
 <pre><code>The probability of X=5 for a Poisson distribution with lambda=3 is: 0.10</code></pre>
 </div>
@@ -370,10 +384,13 @@ If average rate = 3, what is the probability of observing 5 crashes in a year? &
 <section id="how-is-this-related-to-bayesian-statistics" class="level3" data-number="11.1.2">
 <h3 data-number="11.1.2" class="anchored" data-anchor-id="how-is-this-related-to-bayesian-statistics"><span class="header-section-number">11.1.2</span> How is this related to Bayesian Statistics?</h3>
 <p>Let’s say you know an event - plane crash - follows a poisson distribution in any given year and you have also observed 5 plane crashes occur this year. However, you have no idea what the average rate of these rare events is (ie λ=?).</p>
-<p>You have been asked what is the average rate of the event occurring? Here λ=2,5,6,8 etc are all valid options. If you were to plot multiple poisson distributions with these lambda values you would notice they all contain 5 events occurring as a likely event.<br>
-This means we need to consider all possible values of lambda and then check each hypothesis with our observation of 5 crashes.<br>
+<p>You have been asked <strong>what is the average rate of the event occurring?</strong></p>
+<p>Here λ=2,5,6,8 etc are all valid options. If you were to plot multiple poisson distributions with these lambda values you would notice they all contain 5 events occurring as a likely event.</p>
+<p>This means we need to consider all possible values of lambda and then check each hypothesis with our observation of 5 crashes.<br>
 We want to know what is the likelihood of observing 5 events under each hypothesis for λ.</p>
 <div id="cell-7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:654}}" data-outputid="3e164043-a801-4fc2-e265-4401a254c83e">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> poisson</span>
@@ -403,6 +420,7 @@ We want to know what is the likelihood of observing 5 events under each hypothes
 <span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the plot</span></span>
 <span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -412,7 +430,11 @@ We want to know what is the likelihood of observing 5 events under each hypothes
 </div>
 </div>
 <p>Similar to previous situations, we need a prior that can be used with the poisson likelihood function to give us a posterior.</p>
-<p>Now, lambda can be any value from 0 to infinity. Lambda can be any real number greater than 0 and thus the x-axis must be continuous. To find the correct value of lambda we can use a distribution called the gamma distribution as a prior.</p>
+<ul>
+<li>λ can be any value from 0 to infinity.</li>
+<li>λ can be any real number greater than 0 and thus the x-axis must be continuous.</li>
+</ul>
+<p>To find the correct value of lambda we can use a distribution called the gamma distribution as a prior.</p>
 <blockquote class="blockquote">
 <p><em>We <strong>cannot</strong> use a Beta distribution like earlier because a beta distribution shows all probabilities where the x axis is limited from 0 to 1. Lambda can take any value, thus we need something else.</em></p>
 </blockquote>
@@ -420,14 +442,22 @@ We want to know what is the likelihood of observing 5 events under each hypothes
 </section>
 <section id="gamma-distribution" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="gamma-distribution"><span class="header-section-number">11.2</span> Gamma Distribution</h2>
-<p>A Gamma distribution is a continuous probability distribution defined for non-negative values (from 0 to infinity) on the x-axis, with its probability density function represented on the y-axis.<br>
-It is defined by two positive parameters, α (shape) and β (rate), and is commonly used as a prior distribution in Bayesian statistics, particularly for parameters that must be positive, such as rates in a Poisson distribution. <span class="math display">\[g(x;α,β) = \frac{\beta^\alpha x^{\alpha-1}e^{-\beta x}}{\Gamma(\alpha)}\]</span> The function g takes inputs x, α and β. The random variable X must assume values greater than or equal to 0, while α and β must be positive. The function’s output represents the probability density of x given α and β.</p>
+<p>A Gamma distribution is a continuous probability distribution defined for non-negative values (from 0 to infinity) on the x-axis, with its probability density function represented on the y-axis.</p>
+<p>It is defined by two positive parameters, α (shape) and β (rate), and is commonly used as a prior distribution in Bayesian statistics, particularly for parameters that must be positive, such as rates in a Poisson distribution. <span class="math display">\[g(x;α,β) = \frac{\beta^\alpha x^{\alpha-1}e^{-\beta x}}{\Gamma(\alpha)}\]</span></p>
+<ul>
+<li>The function g takes inputs x, α and β.</li>
+<li>The random variable X must assume values greater than or equal to 0, while α and β must be positive.</li>
+<li>The function’s output represents the probability density of x given α and β.</li>
+</ul>
 </section>
 <section id="how-do-we-use-gamma-distributions-as-priors" class="level2" data-number="11.3">
 <h2 data-number="11.3" class="anchored" data-anchor-id="how-do-we-use-gamma-distributions-as-priors"><span class="header-section-number">11.3</span> How do we use Gamma distributions as priors?</h2>
-<p>Let’s assume, the average rate of plane crashes from a Poisson distribution has a mean of 3. We can then use the following equation to find the α and β parameters for the Gamma priors: <span class="math inline">\(μ =\frac{α}{β}\)</span><br>
-Since we know mean = 3 we can choose α = 3 and β = 1 (choosing α and β is subjective as long as the mean equation is correct). We get a gamma distribution like so</p>
+<p>Let’s assume, the average rate of plane crashes from a Poisson distribution has a mean of 3.</p>
+<p>We can then use the following equation to find the α and β parameters for the Gamma priors: <span class="math display">\[μ =\frac{α}{β}\]</span><br>
+Since we know mean = 3, we can choose α = 3 and β = 1 (choosing α and β is subjective as long as the mean equation is correct). We get a gamma distribution like so</p>
 <div id="cell-11" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:564}}" data-outputid="06fc4da8-fa62-4a87-eed4-1179660ac55f">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> gamma</span>
@@ -455,6 +485,7 @@ Since we know mean = 3 we can choose α = 3 and β = 1 (choosing α and β is su
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the plot</span></span>
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -471,6 +502,8 @@ The denominator here includes an integral which can be very difficult to solve.<
 <p>If we saw 5 events in the year then x=5 and n=1 <span class="math display">\[α_{posterior} = 3+5 = 8\]</span> <span class="math display">\[β_{posterior} = 1+1 = 2\]</span></p>
 <p>We can use these values to plot the gamma distribution of the posterior which includes all possible values of λ</p>
 <div id="cell-13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:564}}" data-outputid="b40d18f9-7496-4d32-976d-6a1d5b4c2afd">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> gamma</span>
@@ -503,6 +536,7 @@ The denominator here includes an integral which can be very difficult to solve.<
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the plot</span></span>
 <span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -540,6 +574,8 @@ For eg: lets say we get the following data in the following 3 years:</p>
 <p>Therefore,<br>
 <span class="math display">\[α_{posterior} = 8+(3+4+7) = 22\]</span> <span class="math display">\[β_{posterior} = 2+3 = 5\]</span></p>
 <div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:564}}" data-outputid="6f3e8265-54f2-4431-932d-7ef57fdfbafe" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> gamma</span>
@@ -572,6 +608,7 @@ For eg: lets say we get the following data in the following 3 years:</p>
 <span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the plot</span></span>
 <span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1001,8 +1038,8 @@ For eg: lets say we get the following data in the following 3 years:</p>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Conjugate-Priors-Conclusion.html" class="pagination-link" aria-label="Conjugate Pairs: Conclusion">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.html" class="pagination-link" aria-label="Normal - Inverse Gamma Conjugate">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Normal - Inverse Gamma Conjugate</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

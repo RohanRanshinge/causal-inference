@@ -216,8 +216,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Conjugate-Priors-Conclusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></span></a>
+  <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Normal - Inverse Gamma Conjugate</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Conjugate-Priors-Conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></span></a>
   </div>
 </li>
       </ul>
@@ -259,14 +265,17 @@ window.Quarto = {
 </header>
 
 
-<p>Earlier we covered a few distributions. In this section we will see how we can actually apply them to solve problems!<br>
-Remember the Bayes theorem we had seen earlier?</p>
-<p><span class="math inline">\(PosteriorProbability =\frac{Likelihood * Prior}{Normalized Probability}\)</span><br>
-Therefore,</p>
+<p>Earlier we covered a few distributions. In this section we will see how we can actually apply them to solve problems using conjugate priors!</p>
+<p>Remember the Bayes theorem we had seen earlier?</p>
+<p><span class="math inline">\(PosteriorProbability =\frac{Likelihood * Prior}{Normalized Probability}\)</span></p>
+<p>Therefore,</p>
 <p><span class="math inline">\(Posterior Probability  ∝   Likelihood * Prior\)</span></p>
 <section id="what-is-a-conjugate-prior" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="what-is-a-conjugate-prior"><span class="header-section-number">9.1</span> What is a Conjugate Prior?</h2>
-<p>A conjugate prior is a special prior distribution that when multiplied with the likelihood function, results in a posterior distribution that belongs to the same family as the prior. * This allows us to easily incorporate new data, as the new posterior can serve as the prior for the next update.</p>
+<p>A conjugate prior is a special prior distribution that when multiplied with the likelihood function, results in a posterior distribution that belongs to the same family as the prior.</p>
+<ul>
+<li>This allows us to easily incorporate new data, as the new posterior can serve as the prior for the next update.</li>
+</ul>
 <p>This special prior is a conjugate only for the specified likelihood function.</p>
 </section>
 <section id="why-do-we-need-conjugate-priors" class="level2" data-number="9.2">
@@ -277,10 +286,14 @@ Therefore,</p>
 <li>This integration is very hard and sometimes impossible.</li>
 <li>To solve this we use conjugate priors and when that fails we use MCMC simulations.</li>
 </ul>
-<p>For example, let’s say we are observing coin flips and we have some prior distribution which is of the form <span class="math inline">\(p^a * (1-p)^b\)</span><br>
-We flip a coin and get heads. This follows the bernoulli distribution: <span class="math inline">\(p^k *(1-p)^{1-k}\)</span><br>
-When we multiply the prior with the likelihood we get: <span class="math inline">\(p^{k+a} * (1-p)^{1-k+b}\)</span></p>
-<p>Notice the resulting posterior function is exactly similar to the prior we had defined earlier. * If you recall the beta distribution we had seen earlier you will notice that it exactly has the mathematical form of the prior defined! * The Bernoulli distribution also is a special case of the binomial distribution!</p>
+<p>For example, let’s say we are observing coin flips and we have some prior distribution which is of the form <span class="math inline">\(p^a * (1-p)^b\)</span></p>
+<p>We flip a coin and get heads. This follows the bernoulli distribution: <span class="math inline">\(p^k *(1-p)^{1-k}\)</span></p>
+<p>When we multiply the prior with the likelihood we get: <span class="math inline">\(p^{k+a} * (1-p)^{1-k+b}\)</span></p>
+<p>Notice the resulting posterior function is exactly similar to the prior we had defined earlier.</p>
+<ul>
+<li>If you recall the beta distribution we had seen earlier you will notice that it exactly has the mathematical form of the prior defined!</li>
+<li>The Bernoulli distribution also is a special case of the binomial distribution!</li>
+</ul>
 <p>Thus we can combine the two distributions to get a <strong>beta-binomial conjugate</strong>!</p>
 
 
