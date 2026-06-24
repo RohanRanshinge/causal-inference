@@ -326,6 +326,7 @@ CustomCausalImpact/
 2. Bayesian Statistics for Beginners [book](https://www.amazon.com/dp/B083FYDBGZ?ref=cm_sw_r_ffobk_cp_ud_dp_DBCM0M833P7T2KASXRRT&ref_=cm_sw_r_ffobk_cp_ud_dp_DBCM0M833P7T2KASXRRT&social_share=cm_sw_r_ffobk_cp_ud_dp_DBCM0M833P7T2KASXRRT&bestFormat=true&previewDoh=1) (Donovan and Mickey)
 3. Doing Bayesian Data Analysis [book](https://a.co/d/7l2mfs1) (John Kruschke)
 4. Think Bayes - Allen Downey [online book](allendowney.github.io/ThinkBayes2)
+5. Multivariate Normal Distribution [online book](https://peterroelants.github.io/posts/multivariate-normal-primer/)
 
 ### State Space Models and Kalman Filter
 1. Kalman and Bayesian Filters in Python - Roger Labbe [online book](https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python)

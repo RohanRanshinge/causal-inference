@@ -158,7 +158,9 @@ Plugging this value back in to the bayes theorem we get -
 $P(BC|+) = \frac{0.8 * 0.01}{0.10304} = 7.7\%$
 
 Turns out, even if you test positive, there’s only a **7.7%** chance you actually have cancer! Crazy, right?!  
+
 Isn’t that so counterintuitive!? We just saw that when you truly have breast cancer, the test gives a positive result 80% of the time but when we reverse the probability, we see that if we test positive on a test, the probability of you actually having cancer is just 7.7% !!  
+
 Not convinced? Let's look at this using tables
 
 **Using Tables**  

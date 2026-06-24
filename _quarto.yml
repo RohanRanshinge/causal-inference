@@ -21,4 +21,10 @@ book:
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05-Conjugate-Priors.md
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.1-Beta-Binomial-Conjugate.ipynb
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.2-Gamma-Poisson-Conjugate.ipynb
-        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Conjugate-Priors-Conclusion.md
+        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.ipynb
+        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Conjugate-Priors-Conclusion.md
+
+format:
+  html:
+    code-fold: true
+
