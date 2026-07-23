@@ -14,9 +14,8 @@ book:
 
   chapters:
     - index.qmd
-    - part: "Part 1: Bayesian Statistics"
+    - part: zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.ipynb
       chapters:
-        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.ipynb
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.md
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/02-Bayes-Theorem.md
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/03-Bayesian-Inference.md
@@ -29,6 +28,7 @@ book:
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.ipynb
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Normal-Normal-Conjugate.ipynb
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.5-Conjugate-Priors-Conclusion.md
+    - part: "Approximate Inference and Computation" # zero-to-hero-bsts/PART_II-Approximate_Inference_Computation/index.qmd
 
 bibliography: references.bib
 

@@ -1,4 +1,4 @@
-# Zero to Hero in Causal Inference
+# Zero to Hero in Causal Inference {.unnumbered}
 
 In my previous role, I was once asked to find the lift associated with a promotional event. The promotion had already run on multiple products nationwide and I was asked to find the effectiveness o
 f it retrospectively.
