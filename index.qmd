@@ -7,7 +7,7 @@ As I researched the best way to solve this, I came across the package CausalImpa
  
 ## What is this Causal Impact?
 
-CausalImpact is a package created by researchers at Google, that enables you to do lift analysis in the absence of A/B tests. It creates counterfactual predictions and estimates the lift, along with generating useful charts and reports. It’s very easy to implement and requires executing only four lines of code. I was very fascinated by this package and realized if I was to truly understand it, I needed to have a deeper look under the hood. 
+CausalImpact is a package created by researchers at Google [@brodersen2015], that enables you to do lift analysis in the absence of A/B tests. It creates counterfactual predictions and estimates the lift, along with generating useful charts and reports. It’s very easy to implement and requires executing only four lines of code. I was very fascinated by this package and realized if I was to truly understand it, I needed to have a deeper look under the hood. 
 
 ## But why bother learning the basics when I already had the answer? 
 Running the package as a blackbox and not fully understanding it bothered me. I thought I understood the package but in a more real sense I didn’t really understand the package. It still felt a little like magic. And so after much thought, unnecessary planning and a whole lot of procrastination later, I finally decided to spend some time learning the basics.

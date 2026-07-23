@@ -1,1 +1,6 @@
 /.quarto/
+# Build artifacts
+_book/
+build/
+dist/
+**/*.quarto_ipynb

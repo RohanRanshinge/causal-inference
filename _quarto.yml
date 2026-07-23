@@ -6,10 +6,15 @@ project:
 book:
   title: "Zero to Hero in Causal Inference"
   author: "Rohan Ranshinge"
- 
+  date: last-modified
+
+  sidebar:
+    style: "docked"
+    search: true
+
   chapters:
     - index.qmd
-    - part: "Bayesian Statistics"
+    - part: "Part 1: Bayesian Statistics"
       chapters:
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.ipynb
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/01-Probability.md
@@ -22,9 +27,15 @@ book:
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.1-Beta-Binomial-Conjugate.ipynb
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.2-Gamma-Poisson-Conjugate.ipynb
         - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.ipynb
-        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Conjugate-Priors-Conclusion.md
+        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Normal-Normal-Conjugate.ipynb
+        - zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.5-Conjugate-Priors-Conclusion.md
+
+bibliography: references.bib
 
 format:
   html:
     code-fold: true
-
+    reference-location: margin
+    citation-location: margin
+    number-sections: true
+    crossrefs-hover: true
