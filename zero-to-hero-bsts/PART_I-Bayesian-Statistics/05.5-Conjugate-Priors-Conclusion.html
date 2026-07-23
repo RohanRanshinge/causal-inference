@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>13&nbsp; Conjugate Pairs: Conclusion – Zero to Hero in Causal Inference</title>
+<title>14&nbsp; Conjugate Pairs: Conclusion – Zero to Hero in Causal Inference</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.html" rel="prev">
+<link href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Normal-Normal-Conjugate.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-11e8a5b2a562fbb80acfb7fb69f28429.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-63e13b4b38bcf83078fa9af2452b16fa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,7 +104,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -113,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.html">Bayesian Statistics</a></li><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Conjugate-Priors-Conclusion.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.html">Part 1: Bayesian Statistics</a></li><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.5-Conjugate-Priors-Conclusion.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -125,7 +125,7 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">Zero to Hero in Causal Inference</a> 
@@ -147,7 +147,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Bayesian Statistics</span></a>
+ <span class="menu-text">Part 1: Bayesian Statistics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -221,8 +221,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Conjugate-Priors-Conclusion.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></span></a>
+  <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Normal-Normal-Conjugate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Normal - Normal Conjugate</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.5-Conjugate-Priors-Conclusion.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></span></a>
   </div>
 </li>
       </ul>
@@ -237,16 +243,16 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#recommended-readings-sources" id="toc-recommended-readings-sources" class="nav-link active" data-scroll-target="#recommended-readings-sources"><span class="header-section-number">13.1</span> Recommended readings / sources</a></li>
+  <li><a href="#recommended-readings-sources" id="toc-recommended-readings-sources" class="nav-link active" data-scroll-target="#recommended-readings-sources"><span class="header-section-number">14.1</span> Recommended readings / sources</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.html">Bayesian Statistics</a></li><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Conjugate-Priors-Conclusion.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.html">Part 1: Bayesian Statistics</a></li><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.5-Conjugate-Priors-Conclusion.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></h1>
+<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></h1>
 </div>
 
 
@@ -296,14 +302,14 @@ window.Quarto = {
 <td style="text-align: center;">Beta</td>
 <td style="text-align: center;">Binomial</td>
 <td style="text-align: center;"><span class="math inline">\(\alpha , \beta\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\alpha + k\)</span>, <span class="math inline">\(\beta + N-k\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\alpha + k\)</span>, <span class="math inline">\(\beta + n-k\)</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;"><span class="math inline">\(\lambda\)</span> (rate)</td>
 <td style="text-align: center;">Gamma</td>
 <td style="text-align: center;">Poisson</td>
 <td style="text-align: center;"><span class="math inline">\(\alpha , \beta\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\alpha + k\)</span>, <span class="math inline">\(\beta + n\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\alpha + \sum x_i\)</span>, <span class="math inline">\(\beta + n\)</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;"><span class="math inline">\(\sigma^2 (variance)\)</span></td>
@@ -312,11 +318,18 @@ window.Quarto = {
 <td style="text-align: center;"><span class="math inline">\(\alpha , \beta\)</span></td>
 <td style="text-align: center;"><span class="math inline">\(\alpha + n/2\)</span>, <span class="math inline">\(\beta\)</span> + Σ(xᵢ - μ)²/2</td>
 </tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">\(\mu (mean)\)</span></td>
+<td style="text-align: center;">Normal</td>
+<td style="text-align: center;">Normal</td>
+<td style="text-align: center;"><span class="math inline">\(\mu_0 , \tau_0\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(\tau_n = \tau_0 + n*\tau, \mu_n = \frac{\tau_0\mu_0+\tau\sum x_i}{\tau_0 + n*\tau}\)</span></td>
+</tr>
 </tbody>
 </table>
 <p>To see more conjugate pairs I highly recommend Wikipedia which has a nice article on conjugate distributions with a big list of conjugate pairs that’s worth checking out!</p>
-<section id="recommended-readings-sources" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="recommended-readings-sources"><span class="header-section-number">13.1</span> Recommended readings / sources</h2>
+<section id="recommended-readings-sources" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="recommended-readings-sources"><span class="header-section-number">14.1</span> Recommended readings / sources</h2>
 <ol type="1">
 <li>Bayesian Stats for Beginners book: Section 4</li>
 <li>Wikipedia <a href="https://en.wikipedia.org/wiki/Conjugate_prior">conjugate priors</a></li>
@@ -728,8 +741,8 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.html" class="pagination-link" aria-label="Normal - Inverse Gamma Conjugate">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Normal - Inverse Gamma Conjugate</span></span>
+      <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Normal-Normal-Conjugate.html" class="pagination-link" aria-label="Normal - Normal Conjugate">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Normal - Normal Conjugate</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

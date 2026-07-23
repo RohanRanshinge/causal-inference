@@ -68,7 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Conjugate-Priors-Conclusion.html" rel="next">
+<link href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Normal-Normal-Conjugate.html" rel="next">
 <link href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.2-Gamma-Poisson-Conjugate.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -79,7 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-11e8a5b2a562fbb80acfb7fb69f28429.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-63e13b4b38bcf83078fa9af2452b16fa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -140,7 +140,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -149,7 +149,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.html">Bayesian Statistics</a></li><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Normal - Inverse Gamma Conjugate</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.html">Part 1: Bayesian Statistics</a></li><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Normal - Inverse Gamma Conjugate</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -161,7 +161,7 @@ window.Quarto = {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../../">Zero to Hero in Causal Inference</a> 
@@ -183,7 +183,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Bayesian Statistics</span></a>
+ <span class="menu-text">Part 1: Bayesian Statistics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -257,8 +257,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Conjugate-Priors-Conclusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></span></a>
+  <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Normal-Normal-Conjugate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Normal - Normal Conjugate</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.5-Conjugate-Priors-Conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></span></a>
   </div>
 </li>
       </ul>
@@ -277,7 +283,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#how-noisy-is-your-coffee-shop-learning-variance-estimation" id="toc-how-noisy-is-your-coffee-shop-learning-variance-estimation" class="nav-link" data-scroll-target="#how-noisy-is-your-coffee-shop-learning-variance-estimation"><span class="header-section-number">12.1.1</span> How Noisy Is Your Coffee Shop? Learning Variance Estimation</a></li>
   <li><a href="#how-do-we-use-inverse-gamma-as-a-prior" id="toc-how-do-we-use-inverse-gamma-as-a-prior" class="nav-link" data-scroll-target="#how-do-we-use-inverse-gamma-as-a-prior"><span class="header-section-number">12.1.2</span> How Do We Use Inverse Gamma as a Prior?</a></li>
-  <li><a href="#updating-with-data-the-normal-inverse-gamma-shortcut" id="toc-updating-with-data-the-normal-inverse-gamma-shortcut" class="nav-link" data-scroll-target="#updating-with-data-the-normal-inverse-gamma-shortcut"><span class="header-section-number">12.1.3</span> Updating with Data — The Normal-Inverse Gamma Shortcut</a></li>
+  <li><a href="#updating-with-data-the-normal-inverse-gamma-shortcut" id="toc-updating-with-data-the-normal-inverse-gamma-shortcut" class="nav-link" data-scroll-target="#updating-with-data-the-normal-inverse-gamma-shortcut"><span class="header-section-number">12.1.3</span> Updating with Data: The Normal-Inverse Gamma Shortcut</a></li>
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">12.1.4</span> Key Takeaways</a></li>
   </ul></li>
   </ul>
@@ -286,7 +292,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.html">Bayesian Statistics</a></li><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Normal - Inverse Gamma Conjugate</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/00-Introduction-to-Bayesian-Statistics.html">Part 1: Bayesian Statistics</a></li><li class="breadcrumb-item"><a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.3-Normal-InverseGamma-Conjugate.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Normal - Inverse Gamma Conjugate</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Normal - Inverse Gamma Conjugate</span></h1>
 </div>
@@ -321,7 +327,7 @@ window.Quarto = {
 <li>β &gt; 0 is the scale parameter</li>
 <li>Γ(α) is the Gamma function evaluated at α (a generalization of the factorial)</li>
 </ul>
-<p>Notice that unlike the Normal distribution’s PDF, the negative exponential here involves β/x rather than x itself — this is what “flips” the Gamma distribution and constrains values to be positive while producing a right-skewed shape.</p>
+<p>Notice that unlike the Normal distribution’s PDF, the negative exponential here involves β/x rather than x itself - this is what “flips” the Gamma distribution and constrains values to be positive while producing a right-skewed shape.</p>
 <div id="da0f24c4" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
@@ -405,10 +411,10 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>As α increases (with β scaled proportionally), the distribution becomes more concentrated around its mean and the heavy right tail pulls in. With small α, the distribution is spread out with a heavy tail — expressing more uncertainty. With large α, the distribution is tighter — expressing strong beliefs about where the true value sits.</p>
+<p>As α increases (with β scaled proportionally), the distribution becomes more concentrated around its mean and the heavy right tail pulls in. With small α, the distribution is spread out with a heavy tail, expressing more uncertainty. With large α, the distribution is tighter, expressing strong beliefs about where the true value sits.</p>
 <section id="how-noisy-is-your-coffee-shop-learning-variance-estimation" class="level3" data-number="12.1.1">
 <h3 data-number="12.1.1" class="anchored" data-anchor-id="how-noisy-is-your-coffee-shop-learning-variance-estimation"><span class="header-section-number">12.1.1</span> How Noisy Is Your Coffee Shop? Learning Variance Estimation</h3>
-<p>Imagine you manage a busy coffee shop and you pride yourself on consistent service. You know from years of experience that the <strong>average</strong> time to prepare an order is <strong>5 minutes</strong>. That part you’re confident about. What you’re less sure about is the <em>variance</em> — how much does that prep time actually bounce around from order to order?</p>
+<p>Imagine you manage a busy coffee shop and you pride yourself on consistent service. You know from years of experience that the <strong>average</strong> time to prepare an order is <strong>5 minutes</strong>. That part you’re confident about. What you’re less sure about is the <em>variance</em> - how much does that prep time actually bounce around from order to order?</p>
 <p>Some days everything flows perfectly and every drink comes out right at the 5 minute mark. Other days the espresso machine acts up, someone orders a complicated seasonal drink, and times scatter wildly. You want to quantify this - not just whether service is slow on average, but how <em>unpredictable</em> it is.</p>
 <p>You record the preparation times for 5 random orders during a morning rush: <strong>3, 6, 5, 8, and 4 minutes.</strong></p>
 <p>Knowing the mean is 5 minutes, you compute the sum of squared deviations from the mean:</p>
@@ -419,7 +425,7 @@ window.Quarto = {
 <section id="how-do-we-use-inverse-gamma-as-a-prior" class="level3" data-number="12.1.2">
 <h3 data-number="12.1.2" class="anchored" data-anchor-id="how-do-we-use-inverse-gamma-as-a-prior"><span class="header-section-number">12.1.2</span> How Do We Use Inverse Gamma as a Prior?</h3>
 <p>When we model our prep times as a Normal distribution with a <strong>known mean</strong> μ and <strong>unknown variance</strong> σ², we need a prior over σ². The variance must be positive, it’s a continuous quantity, and we expect it to be right-skewed. Small variance is plausible but very large variance is unlikely. The Inverse Gamma checks all these boxes.</p>
-<p>Based on your general experience before recording any data, you have a vague sense that order prep times vary by about 2 minutes² on average — enough to reflect some uncertainty but not total chaos. You choose a weakly informative prior:</p>
+<p>Based on your general experience before recording any data, you have a vague sense that order prep times vary by about 2 minutes² on average - enough to reflect some uncertainty but not total chaos. You choose a weakly informative prior:</p>
 <p><span class="math display">\[\sigma^2 \sim \text{InvGamma}(\alpha = 2, \beta = 2)\]</span></p>
 <p>This gives a prior mean variance of β / (α - 1) = 2 / 1 = <strong>2 min²</strong>.</p>
 <div id="6c5b58a2" class="cell" data-execution_count="7">
@@ -460,7 +466,7 @@ window.Quarto = {
 <p>The wide spread of this curve reflects that while we have a rough expectation, we are open to being corrected by the data.</p>
 </section>
 <section id="updating-with-data-the-normal-inverse-gamma-shortcut" class="level3" data-number="12.1.3">
-<h3 data-number="12.1.3" class="anchored" data-anchor-id="updating-with-data-the-normal-inverse-gamma-shortcut"><span class="header-section-number">12.1.3</span> Updating with Data — The Normal-Inverse Gamma Shortcut</h3>
+<h3 data-number="12.1.3" class="anchored" data-anchor-id="updating-with-data-the-normal-inverse-gamma-shortcut"><span class="header-section-number">12.1.3</span> Updating with Data: The Normal-Inverse Gamma Shortcut</h3>
 <p>Just as the Gamma distribution is a conjugate prior to the Poisson likelihood, the <strong>Inverse Gamma is a conjugate prior to the variance of a Normal distribution</strong>. This gives us a clean analytical shortcut to compute the posterior without ever evaluating a complex integral.</p>
 <p>When we observe n data points from a Normal distribution with known mean μ, the posterior update rule is:</p>
 <p><span class="math display">\[\alpha_{\text{posterior}} = \alpha_{\text{prior}} + \frac{n}{2}\]</span></p>
@@ -517,7 +523,7 @@ window.Quarto = {
 </div>
 </div>
 <p>Notice two things in the plot: the posterior has a <strong>higher mean</strong> (the data showed more variability than expected) and a <strong>narrower spread</strong> (we are now more certain because we have actual observations to learn from). The prior was wide and vague; the posterior is tighter and updated.</p>
-<p>As you collect more data — more orders recorded over more days — you repeat this process. The posterior becomes the new prior and continues to sharpen:</p>
+<p>As you collect more data (more orders recorded over more days) you repeat this process. The posterior becomes the new prior and continues to sharpen:</p>
 <div id="24eb9154" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Code</summary>
@@ -571,21 +577,22 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>Each new batch of orders pulls the distribution tighter and repositions it based on what the data shows. After three days of observation, you have a much more precise picture of how variable your prep times really are — and can make concrete decisions about staffing or workflow improvements.</p>
+<p>Each new batch of orders pulls the distribution tighter and repositions it based on what the data shows. After three days of observation, you have a much more precise picture of how variable your prep times really are and can make concrete decisions about staffing or workflow improvements.</p>
 </section>
 <section id="key-takeaways" class="level3" data-number="12.1.4">
 <h3 data-number="12.1.4" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">12.1.4</span> Key Takeaways</h3>
-<p>The Inverse Gamma is the natural distribution for reasoning about <strong>variance</strong> — the spread of a process — in a Bayesian framework.</p>
+<p>The Inverse Gamma is the natural distribution for reasoning about <strong>variance</strong> (ie spread) in a Bayesian framework.</p>
 <ul>
 <li>It is defined only for positive values, which makes sense since variance can never be negative</li>
 <li>The shape parameter α controls how concentrated the distribution is; larger α means stronger beliefs</li>
 <li>The scale parameter β controls the location of the mass; larger β means beliefs centered on higher variance values</li>
 <li>The mean of the distribution is β / (α - 1) and only exists for α &gt; 1</li>
-<li>The mode — the most probable value — is always β / (α + 1)</li>
+<li>The mode (the most probable value) is always β / (α + 1)</li>
 </ul>
 <p>The <strong>Normal-Inverse Gamma conjugate relationship</strong> gives us the same kind of clean analytical shortcut we saw with Gamma-Poisson:</p>
 <p><span class="math display">\[\alpha_{\text{posterior}} = \alpha_{\text{prior}} + \frac{n}{2}, \quad \beta_{\text{posterior}} = \beta_{\text{prior}} + \frac{SS}{2}\]</span></p>
-<p>This lets us update our beliefs about variance after observing data without ever computing a difficult integral - the posterior is always another Inverse Gamma, and we can simply plug in the updated parameters. As with all conjugate priors, this is not just mathematically convenient; it is also interpretable. Each new batch of data adds n/2 to our shape (making us more certain) and SS/2 to our scale (shifting our belief to reflect what the data actually showed).</p>
+<p>This lets us update our beliefs about variance after observing data without ever computing a difficult integral - the posterior is always another Inverse Gamma, and we can simply plug in the updated parameters.</p>
+<p>As with all conjugate priors, this is mathematically convenient and interpretable. Each new batch of data adds n/2 to our shape (making us more certain) and SS/2 to our scale (shifting our belief to reflect what the data actually showed).</p>
 
 
 </section>
@@ -999,8 +1006,8 @@ window.Quarto = {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Conjugate-Priors-Conclusion.html" class="pagination-link" aria-label="Conjugate Pairs: Conclusion">
-        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Normal-Normal-Conjugate.html" class="pagination-link" aria-label="Normal - Normal Conjugate">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Normal - Normal Conjugate</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

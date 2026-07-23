@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Rohan Ranshinge">
+<meta name="dcterms.date" content="2026-07-23">
 
 <title>Zero to Hero in Causal Inference</title>
 <style>
@@ -24,7 +25,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -44,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-11e8a5b2a562fbb80acfb7fb69f28429.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-63e13b4b38bcf83078fa9af2452b16fa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -76,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar docked slimcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -97,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Zero to Hero in Causal Inference</a> 
@@ -119,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Bayesian Statistics</span></a>
+ <span class="menu-text">Part 1: Bayesian Statistics</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -193,8 +213,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Conjugate-Priors-Conclusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></span></a>
+  <a href="./zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.4-Normal-Normal-Conjugate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Normal - Normal Conjugate</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./zero-to-hero-bsts/PART_I-Bayesian-Statistics/05.5-Conjugate-Priors-Conclusion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Conjugate Pairs: Conclusion</span></span></a>
   </div>
 </li>
       </ul>
@@ -227,7 +253,7 @@ ul.task-list li input[type="checkbox"] {
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -245,6 +271,12 @@ ul.task-list li input[type="checkbox"] {
           </div>
   </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 23, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -254,14 +286,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="zero-to-hero-in-causal-inference" class="level1" data-number="1">
+<section id="zero-to-hero-in-causal-inference" class="level1 page-columns page-full" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Zero to Hero in Causal Inference</h1>
 <p>In my previous role, I was once asked to find the lift associated with a promotional event. The promotion had already run on multiple products nationwide and I was asked to find the effectiveness o f it retrospectively.</p>
 <p>As I researched the best way to solve this, I came across the package CausalImpact() and the world of Causal Inference, Bayesian Statistics and Bayesian Structural Time Series models. As these fields were a bit foreign to me, I did what any sane person would do - just run the package and move on.</p>
-<section id="what-is-this-causal-impact" class="level2" data-number="1.1">
+<section id="what-is-this-causal-impact" class="level2 page-columns page-full" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="what-is-this-causal-impact"><span class="header-section-number">1.1</span> What is this Causal Impact?</h2>
-<p>CausalImpact is a package created by researchers at Google, that enables you to do lift analysis in the absence of A/B tests. It creates counterfactual predictions and estimates the lift, along with generating useful charts and reports. It’s very easy to implement and requires executing only four lines of code. I was very fascinated by this package and realized if I was to truly understand it, I needed to have a deeper look under the hood.</p>
-</section>
+<p>CausalImpact is a package created by researchers at Google <span class="citation" data-cites="brodersen2015">(<a href="#ref-brodersen2015" role="doc-biblioref">Brodersen et al. 2015</a>)</span>, that enables you to do lift analysis in the absence of A/B tests. It creates counterfactual predictions and estimates the lift, along with generating useful charts and reports. It’s very easy to implement and requires executing only four lines of code. I was very fascinated by this package and realized if I was to truly understand it, I needed to have a deeper look under the hood.</p>
+<div class="no-row-height column-margin column-container"><div id="ref-brodersen2015" class="csl-entry" role="listitem">
+Brodersen, Kay H., Fabian Gallusser, Jim Koehler, Nicolas Remy, and Steven L. Scott. 2015. <span>“Inferring Causal Impact Using <span>B</span>ayesian Structural Time-Series Models.”</span> <em>Annals of Applied Statistics</em> 9 (1): 247–74.
+</div></div></section>
 <section id="but-why-bother-learning-the-basics-when-i-already-had-the-answer" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="but-why-bother-learning-the-basics-when-i-already-had-the-answer"><span class="header-section-number">1.2</span> But why bother learning the basics when I already had the answer?</h2>
 <p>Running the package as a blackbox and not fully understanding it bothered me. I thought I understood the package but in a more real sense I didn’t really understand the package. It still felt a little like magic. And so after much thought, unnecessary planning and a whole lot of procrastination later, I finally decided to spend some time learning the basics.</p>
@@ -318,6 +352,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Doing Bayesian Data Analysis <a href="https://a.co/d/7l2mfs1">book</a> (John Kruschke)</li>
 </ol>
 <p>PS: This book is a living document of my journey to understand the math and mechanics behind these models.</p>
+
 
 
 </section>
